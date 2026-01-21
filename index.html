@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
+<!--
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,7 +65,96 @@
             justify-content: center;
         }
     </style>
+</head> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham Kumar Agrawal | Data Scientist Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #d1d5db;
+            margin: 0;
+        }
+
+        /* Fixed full-screen background (NOT entire page height) */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+
+            background-image: url('assets/bg/test_bg.png');
+            background-size: cover;          /* fills screen only */
+            background-position: center;
+            background-repeat: no-repeat;
+
+            /* Dark overlay */
+            background-color: rgba(0, 0, 0, 0.65);
+            background-blend-mode: overlay;
+
+            z-index: -1;
+        }
+
+        .glass-effect {
+            background: rgba(31, 41, 55, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .accent-color {
+            color: #60a5fa;
+        }
+
+        .accent-bg {
+            background-color: #3b82f6;
+        }
+
+        .accent-bg-hover:hover {
+            background-color: #2563eb;
+        }
+
+        .section-heading {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .section-subheading {
+            font-size: 1.25rem;
+            color: #9ca3af;
+            text-align: center;
+            margin-bottom: 4rem;
+            max-width: 3xl;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .icon-circle {
+            background-color: rgba(59, 130, 246, 0.1);
+            border-radius: 9999px;
+            padding: 0.75rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
+
+
 
 <body class="antialiased">
 
@@ -102,9 +191,8 @@
 
     <main class="pt-24">
         <!-- Hero Section -->
-        <section id="hero" class="relative py-20 bg-cover bg-center"
-            style="background-image: url('assets/bg/header_bg.jpg');">
-            <div class="absolute inset-0 bg-black/70"></div>
+        <section id="hero" class="relative py-20 ">
+           
             <div class="relative container mx-auto px-6 text-center">
                 <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">
                     Shubham Kumar Agrawal
@@ -511,10 +599,11 @@
                         </p>
 
                         <div class="flex items-center space-x-4">
-                            <div
-                                class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold">
-                                Jeff
+                            <div class="flex items-left space-x-3">
+                                    <img src="assets/logos/Pure-Storage-Logo.jpg" alt="Pure Storage logo"
+                                        class="w-15 h-8 object-contain rounded-lg" />
                             </div>
+                            
                             <div>
                                 <p class="text-white font-semibold">
                                     Jeff Pickett
@@ -545,9 +634,10 @@
                         </p>
 
                         <div class="flex items-center space-x-4">
-                            <div
-                                class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold">
-                                Cem
+                            <div class="flex items-left space-x-3">
+                                    <img src="assets/logos/blueoptima.jpg" alt="Pure Storage logo"
+                                        class="w-15 h-8 object-contain rounded-lg" />
+
                             </div>
                             <div>
                                 <p class="text-white font-semibold">Cem Aladogan</p>
@@ -573,10 +663,10 @@
                         </p>
 
                         <div class="flex items-center space-x-4">
-                            <div
-                                class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold">
-                                <!-- Initials -->
-                                Siva
+                            <div class="flex items-left space-x-3">
+                                <img src="assets/logos/blueoptima.jpg" alt="Pure Storage logo"
+                                    class="w-15 h-8 object-contain rounded-lg" />
+
                             </div>
                             <div>
                                 <p class="text-white font-semibold">
@@ -600,9 +690,10 @@
                         </p>
 
                         <div class="flex items-center space-x-4">
-                            <div
-                                class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold">
-                                Var
+                            <div class="flex items-left space-x-3">
+                                    <img src="assets/logos/blueoptima.jpg" alt="Pure Storage logo"
+                                        class="w-15 h-8 object-contain rounded-lg" />
+
                             </div>
                             <div>
                                 <p class="text-white font-semibold">
