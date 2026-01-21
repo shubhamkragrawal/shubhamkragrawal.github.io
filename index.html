@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,18 +13,22 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #111827; /* Dark blue-gray background */
-            color: #d1d5db; /* Light gray text */
+            background-color: #111827;
+            /* Dark blue-gray background */
+            color: #d1d5db;
+            /* Light gray text */
         }
 
         .glass-effect {
-            background: rgba(31, 41, 55, 0.5); /* Semi-transparent dark gray */
+            background: rgba(31, 41, 55, 0.5);
+            /* Semi-transparent dark gray */
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .accent-color {
-            color: #60a5fa; /* A nice shade of blue */
+            color: #60a5fa;
+            /* A nice shade of blue */
         }
 
         .accent-bg {
@@ -61,497 +66,597 @@
         }
     </style>
 </head>
+
 <body class="antialiased">
 
-<!-- Header & Navigation -->
-<header class="fixed top-0 left-0 right-0 z-50 glass-effect">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#" class="text-2xl font-bold text-white">Shubham Kumar Agrawal</a>
-        <nav class="hidden md:flex space-x-8">
-            <a href="#about" class="text-gray-300 hover:text-blue-400 transition-colors">About</a>
-            <a href="#experience" class="text-gray-300 hover:text-blue-400 transition-colors">Experience</a>
-            <a href="#education" class="text-gray-300 hover:text-blue-400 transition-colors">Education</a>
-            <a href="#projects" class="text-gray-300 hover:text-blue-400 transition-colors">Projects</a>
-            <a href="#skills" class="text-gray-300 hover:text-blue-400 transition-colors">Skills</a>
-            <a href="#recommendations" class="text-gray-300 hover:text-blue-400 transition-colors">Recommendations</a>
-            <a href="#contact" class="text-gray-300 hover:text-blue-400 transition-colors">Contact</a>
-        </nav>
-        <button id="mobile-menu-button" class="md:hidden text-white">
-            <i data-lucide="menu"></i>
-        </button>
-    </div>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-        <a href="#about" class="block py-2 text-gray-300 hover:text-blue-400 transition-colors">About</a>
-        <a href="#experience" class="block py-2 text-gray-300 hover:text-blue-400 transition-colors">Experience</a>
-        <a href="#education" class="block py-2 text-gray-300 hover:text-blue-400 transition-colors">Education</a>
-        <a href="#projects" class="block py-2 text-gray-300 hover:text-blue-400 transition-colors">Projects</a>
-        <a href="#skills" class="block py-2 text-gray-300 hover:text-blue-400 transition-colors">Skills</a>
-        <a href="#recommendations" class="block py-2 text-gray-300 hover:text-blue-400 transition-colors">Recommendations</a>
-        <a href="#contact" class="block py-2 text-gray-300 hover:text-blue-400 transition-colors">Contact</a>
-    </div>
-</header>
-
-<main class="pt-24">
-    <!-- Hero Section -->
-    <section id="hero"
-             class="relative py-20 bg-cover bg-center"
-             style="background-image: url('assets/bg/header_bg.jpg');"
-             >
-        <div class="absolute inset-0 bg-black/70"></div>
-        <div class="relative container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">
-                Shubham Kumar Agrawal
-            </h1>
-            <p class="mt-4 text-xl md:text-3xl accent-color font-medium">
-                M.S. in Data Science Student @ University at Buffalo
-            </p>
-            <p class="mt-6 max-w-3xl mx-auto text-xl text-gray-350">
-                Accomplished Data and Business Analyst with 5 years of industry experience transforming complex data into business strategy.
-                Now pursuing a Master's program to skill up to build and solve complex Data Science/Machine Learning problems helping real-world business grow.
-            </p>
-            <div class="mt-8 flex justify-center items-center space-x-6">
-                <a href="https://www.linkedin.com/in/shubham-kumar-agrawal/" target="_blank"
-                   class="text-gray-400 hover:text-blue-400 transition-colors">
-                    <i data-lucide="linkedin" class="w-8 h-8"></i>
-                </a>
-                <a href="https://github.com/shubhamkragrawal" target="_blank"
-                   class="text-gray-400 hover:text-blue-400 transition-colors"> <!-- Add your GitHub Link -->
-                    <i data-lucide="github" class="w-8 h-8"></i>
-                </a>
-                <a href="mailto:agrawal.kshubham@gmail.com" class="text-gray-400 hover:text-blue-400 transition-colors">
-                    <i data-lucide="mail" class="w-8 h-8"></i>
-                </a>
-            </div>
-            <div class="mt-10">
-                <a href="https://drive.google.com/file/d/1G0BNiNJHUBHGiKW2sbYvRyaM8j0sIs4X/view?usp=sharing"
-                   target="_blank"
-                   class="accent-bg text-white font-bold py-3 px-8 rounded-full text-lg accent-bg-hover transition-transform transform hover:scale-105 inline-block">
-                    Download Resume
-                </a> 
-            </div>
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-effect">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">Shubham Kumar Agrawal</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-300 hover:text-blue-400 transition-colors">About</a>
+                <a href="#experience" class="text-gray-300 hover:text-blue-400 transition-colors">Experience</a>
+                <a href="#education" class="text-gray-300 hover:text-blue-400 transition-colors">Education</a>
+                <a href="#projects" class="text-gray-300 hover:text-blue-400 transition-colors">Projects</a>
+                <a href="#skills" class="text-gray-300 hover:text-blue-400 transition-colors">Skills</a>
+                <a href="#recommendations"
+                    class="text-gray-300 hover:text-blue-400 transition-colors">Recommendations</a>
+                <a href="#contact" class="text-gray-300 hover:text-blue-400 transition-colors">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <i data-lucide="menu"></i>
+            </button>
         </div>
-    </section>
-
-    <!-- About Me Section -->
-    <section id="about" class="py-20 bg-gray-800/50">
-        <div class="container mx-auto px-6">
-            <h2 class="section-heading text-white">About Me</h2>
-            <div class="max-w-4xl mx-auto text-center text-lg text-gray-300 space-y-6">
-                <p>
-                    I'm a passionate data professional currently pursuing my Master's in Data Science at the University
-                    at Buffalo. My journey began with a foundation in electronics and communication, which cultivated my
-                    problem-solving mindset.
-                </p>
-                <p>
-                    With over four years in the industry as a Data Analyst and Senior Business Analyst, I've honed my
-                    skills in Python, SQL, and Tableau, focusing on automating data pipelines, developing insightful BI
-                    solutions, and leading R&D initiatives. I thrive on uncovering the stories hidden within data and
-                    using them to drive impactful business decisions.
-                </p>
-                <p>
-                    I am now eager to transition into a Data Scientist role where I can apply my academic knowledge in
-                    predictive modeling and machine learning to build intelligent systems that solve real-world
-                    challenges.
-                </p>
-            </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-gray-300 hover:text-blue-400 transition-colors">About</a>
+            <a href="#experience" class="block py-2 text-gray-300 hover:text-blue-400 transition-colors">Experience</a>
+            <a href="#education" class="block py-2 text-gray-300 hover:text-blue-400 transition-colors">Education</a>
+            <a href="#projects" class="block py-2 text-gray-300 hover:text-blue-400 transition-colors">Projects</a>
+            <a href="#skills" class="block py-2 text-gray-300 hover:text-blue-400 transition-colors">Skills</a>
+            <a href="#recommendations"
+                class="block py-2 text-gray-300 hover:text-blue-400 transition-colors">Recommendations</a>
+            <a href="#contact" class="block py-2 text-gray-300 hover:text-blue-400 transition-colors">Contact</a>
         </div>
-    </section>
+    </header>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="section-heading text-white">Professional Experience</h2>
-            <div class="relative max-w-full mx-auto">
-                <!-- Timeline Line -->
-                <div class="absolute left-1/2 -ml-0.5 w-1 h-full bg-gray-700"></div>
-
-                <!-- Pure Storage -->
-                <div class="relative mb-12">
-                    <div class="absolute w-8 h-8 bg-blue-500 rounded-full left-1/2 -ml-4 border-4 border-gray-800"></div>
-                    <div class="ml-auto w-2/5 pr-10 text-left">
-                        <a href="https://www.purestorage.com" target="_blank"
-                            class="text-gray-400 hover:text-blue-400 transition-colors">
-                                <div class="flex items-left space-x-3">
-                                    <img src="assets/logos/Pure-Storage-Logo.jpg"
-                                        alt="Pure Storage logo"
-                                        class="w-30 h-8 object-contain rounded-lg" />
-                                </div>
-                        </a>
-                        
-                        <h3 class="text-xl font-bold text-white">Senior Business Analyst</h3>
-                        <p class="text-sm text-gray-500">Sep 2024 – June 2025</p>
-                        <ul class="list-disc list-outside text-gray-300 mt-2 space-y-2 text-left">
-                            <li>Architect and deploy interactive Tableau dashboards on Snowflake,
-                            translating raw data into actionable insights that guide executive-level strategic
-                            decisions.
-                            </li>
-                        </ul>
-                    </div>
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section id="hero" class="relative py-20 bg-cover bg-center"
+            style="background-image: url('assets/bg/header_bg.jpg');">
+            <div class="absolute inset-0 bg-black/70"></div>
+            <div class="relative container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">
+                    Shubham Kumar Agrawal
+                </h1>
+                <p class="mt-4 text-xl md:text-3xl accent-color font-medium">
+                    M.S. in Data Science Student @ University at Buffalo
+                </p>
+                <p class="mt-6 max-w-3xl mx-auto text-xl text-gray-350">
+                    Accomplished Data and Business Analyst with 5 years of industry experience transforming complex data
+                    into business strategy.
+                    Now pursuing a Master's program to skill up to build and solve complex Data Science/Machine Learning
+                    problems helping real-world business grow.
+                </p>
+                <div class="mt-8 flex justify-center items-center space-x-6">
+                    <a href="https://www.linkedin.com/in/shubham-kumar-agrawal/" target="_blank"
+                        class="text-gray-400 hover:text-blue-400 transition-colors">
+                        <i data-lucide="linkedin" class="w-8 h-8"></i>
+                    </a>
+                    <a href="https://github.com/shubhamkragrawal" target="_blank"
+                        class="text-gray-400 hover:text-blue-400 transition-colors"> <!-- Add your GitHub Link -->
+                        <i data-lucide="github" class="w-8 h-8"></i>
+                    </a>
+                    <a href="mailto:agrawal.kshubham@gmail.com"
+                        class="text-gray-400 hover:text-blue-400 transition-colors">
+                        <i data-lucide="mail" class="w-8 h-8"></i>
+                    </a>
                 </div>
-
-                <!-- BlueOptima -->
-                <div class="relative mb-12">
-                    <div class="absolute w-8 h-8 bg-blue-500 rounded-full left-1/2 -ml-4 border-4 border-gray-800"></div>
-                    <div class="mr-auto w-2/5 pl-10 text-left">
-                        <a href="https://www.blueoptima.com" target="_blank"
-                            class="text-gray-400 hover:text-blue-400 transition-colors">
-                                <div class="flex items-left space-x-3">
-                                    <img src="assets/logos/blueoptima.jpg"
-                                        alt="Pure Storage logo"
-                                        class="w-30 h-8 object-contain rounded-lg" />
-                           
-                                </div>
-                        </a>
-                        
-                        <h3 class="text-xl font-bold text-white">Data Analyst</h3>
-                        <p class="text-sm text-gray-500">Oct 2020 – May 2024</p>
-                        <ul class="list-disc list-outside text-gray-300 mt-2 space-y-2 text-left">
-                            <li>Spearheaded a flagship R&D initiative, engineering 25+ novel productivity metrics from
-                                client source code metadata.
-                            </li>
-                            <li>Engineered a Python automation pipeline that eliminated over 160 hours of manual
-                                reporting work per month (a 95% reduction).
-                            </li>
-                            <li>Delivered data-driven recommendations to external clients, directly influencing
-                                improvements in their SDLC processes.
-                            </li>
-                        </ul>
-                    </div>
+                <div class="mt-10">
+                    <a href="https://drive.google.com/file/d/1G0BNiNJHUBHGiKW2sbYvRyaM8j0sIs4X/view?usp=sharing"
+                        target="_blank"
+                        class="accent-bg text-white font-bold py-3 px-8 rounded-full text-lg accent-bg-hover transition-transform transform hover:scale-105 inline-block">
+                        Download Resume
+                    </a>
                 </div>
-
-                <!-- Sumyag Data science -->
-                <div class="relative mb-12">
-                    <div class="absolute w-8 h-8 bg-blue-500 rounded-full left-1/2 -ml-4 border-4 border-gray-800"></div>
-                    <div class="ml-auto w-2/5 pr-10 text-left">
-                        <p class="text-md text-gray-400">Sumyag Data Science</p>
-                        <h3 class="text-xl font-bold text-white">Data Science Intern</h3>
-                        
-                        <p class="text-sm text-gray-500">Nov 2019 – Feb 2020</p>
-                         <ul class="list-disc list-outside text-gray-300 mt-2 space-y-2 text-left">
-                            <li>Architect and deploy interactive Tableau dashboards on Snowflake,
-                            translating raw data into actionable insights that guide executive-level strategic
-                            decisions.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Education Section -->
-    <section id="education" class="py-20 bg-gray-800/50">
-        <div class="container mx-auto px-6">
-            <h2 class="section-heading text-white">Education</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- About Me Section -->
+        <section id="about" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-6">
+                <h2 class="section-heading text-white">About Me</h2>
+                <div class="max-w-4xl mx-auto text-center text-lg text-gray-300 space-y-6">
+                    <p>
+                        I'm a passionate data professional currently pursuing my Master's in Data Science at the
+                        University
+                        at Buffalo. My journey began with a foundation in electronics and communication, which
+                        cultivated my
+                        problem-solving mindset.
+                    </p>
+                    <p>
+                        With over four years in the industry as a Data Analyst and Senior Business Analyst, I've honed
+                        my
+                        skills in Python, SQL, and Tableau, focusing on automating data pipelines, developing insightful
+                        BI
+                        solutions, and leading R&D initiatives. I thrive on uncovering the stories hidden within data
+                        and
+                        using them to drive impactful business decisions.
+                    </p>
+                    <p>
+                        I am now eager to transition into a Data Scientist role where I can apply my academic knowledge
+                        in
+                        predictive modeling and machine learning to build intelligent systems that solve real-world
+                        challenges.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-                <!-- Grad -->
-                <div class="glass-effect rounded-lg p-6">
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0">
-                            <img
-                                src="assets/logos/ub_grad.jpg"
-                                alt="University at Buffalo logo"
-                                class="w-14 h-14 flex rounded-md"
-                            />
+        <!-- Experience Section -->
+        <section id="experience" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-heading text-white">Professional Experience</h2>
+                <div class="relative max-w-full mx-auto">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-1/2 -ml-0.5 w-1 h-full bg-gray-700"></div>
+
+                    <!-- Pure Storage -->
+                    <div class="relative mb-12">
+                        <div class="absolute w-8 h-8 bg-blue-500 rounded-full left-1/2 -ml-4 border-4 border-gray-800">
                         </div>
-                        <div>
-                            <h3 class="text-lg font-semibold text-white">
-                                University at Buffalo
-                            </h3>
+                        <div class="ml-auto w-2/5 pr-10 text-left">
+                            <a href="https://www.purestorage.com" target="_blank"
+                                class="text-gray-400 hover:text-blue-400 transition-colors">
+                                <div class="flex items-left space-x-3">
+                                    <img src="assets/logos/Pure-Storage-Logo.jpg" alt="Pure Storage logo"
+                                        class="w-30 h-8 object-contain rounded-lg" />
+                                </div>
+                            </a>
 
-                            <p class="text-gray-300">
-                                Master of Science in Data Science
-                            </p>
-
-                            <p class="text-sm text-gray-500">
-                                Buffalo, NY, USA
-                            </p>
-
-                            <p class="text-sm text-gray-500">
-                                Aug 2025 – Dec 2026
-                            </p>
-
-                            <ul class="list-disc list-inside text-gray-300 space-y-1">
-                                <li class="text-sm">
-                                    Working as a <strong class="font-bold">Research Assistant</strong> to apply Data Science in Clinical Pharmacology 
+                            <h3 class="text-xl font-bold text-white">Senior Business Analyst</h3>
+                            <p class="text-sm text-gray-500">Sep 2024 – June 2025</p>
+                            <ul class="list-disc list-outside text-gray-300 mt-2 space-y-2 text-left">
+                                <li>Architect and deploy interactive Tableau dashboards on Snowflake,
+                                    translating raw data into actionable insights that guide executive-level strategic
+                                    decisions.
                                 </li>
                             </ul>
                         </div>
-
                     </div>
-                </div>
 
-                 <!-- post Grad -->
-                <div class="glass-effect rounded-lg p-6">
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0">
-                            <img
-                                src="assets/logos/iiitb_post_grad.png" 
-                                alt="International Institute of Information Technology Bangalore logo"
-                                class="w-14 h-14 flex rounded-md"
-                            />
+                    <!-- BlueOptima -->
+                    <div class="relative mb-12">
+                        <div class="absolute w-8 h-8 bg-blue-500 rounded-full left-1/2 -ml-4 border-4 border-gray-800">
                         </div>
-                        <div>
-                            <h3 class="text-lg font-semibold text-white">
-                                International Institute of Information Technology Bangalore
-                            </h3>
+                        <div class="mr-auto w-2/5 pl-10 text-left">
+                            <a href="https://www.blueoptima.com" target="_blank"
+                                class="text-gray-400 hover:text-blue-400 transition-colors">
+                                <div class="flex items-left space-x-3">
+                                    <img src="assets/logos/blueoptima.jpg" alt="Pure Storage logo"
+                                        class="w-30 h-8 object-contain rounded-lg" />
 
-                            <p class="text-gray-300">
-                                Post Graduate Diploma in Data Science
-                            </p>
+                                </div>
+                            </a>
 
-                            <p class="text-sm text-gray-500">
-                                Bangalore, India
-                            </p>
-
-                            <p class="text-sm text-gray-500">
-                                2020 – 2021
-                            </p>
-
+                            <h3 class="text-xl font-bold text-white">Data Analyst</h3>
+                            <p class="text-sm text-gray-500">Oct 2020 – May 2024</p>
+                            <ul class="list-disc list-outside text-gray-300 mt-2 space-y-2 text-left">
+                                <li>Spearheaded a flagship R&D initiative, engineering 25+ novel productivity metrics
+                                    from
+                                    client source code metadata.
+                                </li>
+                                <li>Engineered a Python automation pipeline that eliminated over 160 hours of manual
+                                    reporting work per month (a 95% reduction).
+                                </li>
+                                <li>Delivered data-driven recommendations to external clients, directly influencing
+                                    improvements in their SDLC processes.
+                                </li>
+                            </ul>
                         </div>
-
                     </div>
-                </div>
 
-                 <!-- underGrad -->
-                <div class="glass-effect rounded-lg p-6">
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0">
-                            <img
-                                src="assets/logos/vtu_undergrad.png"
-                                alt="VTU logo"
-                                class="w-14 h-14 flex rounded-md"
-                            />
+                    <!-- Sumyag Data science -->
+                    <div class="relative mb-12">
+                        <div class="absolute w-8 h-8 bg-blue-500 rounded-full left-1/2 -ml-4 border-4 border-gray-800">
                         </div>
-                        <div>
-                            <h3 class="text-lg font-semibold text-white">
-                                Visvesvaraya Technological University
-                            </h3>
+                        <div class="ml-auto w-2/5 pr-10 text-left">
+                            <p class="text-md text-gray-400">Sumyag Data Science</p>
+                            <h3 class="text-xl font-bold text-white">Data Science Intern</h3>
 
-                            <p class="text-gray-300">
-                                Bachelor of Engineering in Electronics & Communication
-                            </p>
-
-                            <p class="text-sm text-gray-500">
-                                Bangalore, India
-                            </p>
-
-                            <p class="text-sm text-gray-500">
-                                2015 – 2019
-                            </p>
-
+                            <p class="text-sm text-gray-500">Nov 2019 – Feb 2020</p>
+                            <ul class="list-disc list-outside text-gray-300 mt-2 space-y-2 text-left">
+                                <li>Architect and deploy interactive Tableau dashboards on Snowflake,
+                                    translating raw data into actionable insights that guide executive-level strategic
+                                    decisions.
+                                </li>
+                            </ul>
                         </div>
-
                     </div>
-                </div>
 
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 ">
-        <div class="container mx-auto px-5">
-            <h2 class="section-heading text-white">Projects</h2>
-            <p class="section-subheading">A selection of my academic and personal projects. More to come from my
-                Master's program!</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Education Section -->
+        <section id="education" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-6">
+                <h2 class="section-heading text-white">Education</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <!-- Placeholder Project 1 -->
-                <div class="glass-effect rounded-lg p-6 flex flex-col hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2">
-                    <h3 class="text-xl font-bold text-white mb-2">Predictive Modeling for Customer Behavior</h3>
-                    <p class="text-gray-400 mb-4 flex-grow">Developed a logistic regression model to predict customer
-                        churn with high accuracy. Leveraged Scikit-learn for training and Pandas for extensive data
-                        preprocessing and feature engineering.</p>
-                    <div class="mt-auto">
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-900/50 text-blue-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Python</span>
-                            <span class="bg-blue-900/50 text-blue-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Scikit-learn</span>
-                            <span class="bg-blue-900/50 text-blue-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Pandas</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-blue-400 hover:text-blue-300 font-medium">View on GitHub &rarr;</a>
+                    <!-- Grad -->
+                    <div class="glass-effect rounded-lg p-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <img src="assets/logos/ub_grad.jpg" alt="University at Buffalo logo"
+                                    class="w-14 h-14 flex rounded-md" />
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">
+                                    University at Buffalo
+                                </h3>
+
+                                <p class="text-gray-300">
+                                    Master of Science in Data Science
+                                </p>
+
+                                <p class="text-sm text-gray-500">
+                                    Buffalo, NY, USA
+                                </p>
+
+                                <p class="text-sm text-gray-500">
+                                    Aug 2025 – Dec 2026
+                                </p>
+
+                                <ul class="list-disc list-inside text-gray-300 space-y-1">
+                                    <li class="text-sm">
+                                        Working as a <strong class="font-bold">Research Assistant</strong> to apply Data
+                                        Science in Clinical Pharmacology
+                                    </li>
+                                </ul>
+                            </div>
+
                         </div>
                     </div>
-                </div>
 
-                <!-- Terrain Smart Safety System -->
-                <div class="glass-effect rounded-lg p-6 flex flex-col hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2">
-                    <h3 class="text-xl font-bold text-white mb-2">Terrain Smart Safety System</h3>
-                    <p class="text-gray-400 mb-4 flex-grow">Co-developed an award-winning IoT prototype to mitigate
-                        accidents on hazardous roads using an RFID sensor network and an emergency broadcast system. My
-                        role focused on backend logic and hardware programming.</p>
-                    <div class="mt-auto">
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-green-900/50 text-green-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Python</span>
-                            <span class="bg-green-900/50 text-green-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Arduino</span>
-                            <span class="bg-green-900/50 text-green-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Embedded C</span>
-                            <span class="bg-green-900/50 text-green-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">IoT</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://doi.org/10.1007/978-981-10-8201-6_54" target="_blank"
-                               class="text-blue-400 hover:text-blue-300 font-medium">Read Publication &rarr;</a>
+                    <!-- post Grad -->
+                    <div class="glass-effect rounded-lg p-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <img src="assets/logos/iiitb_post_grad.png"
+                                    alt="International Institute of Information Technology Bangalore logo"
+                                    class="w-14 h-14 flex rounded-md" />
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">
+                                    International Institute of Information Technology Bangalore
+                                </h3>
+
+                                <p class="text-gray-300">
+                                    Post Graduate Diploma in Data Science
+                                </p>
+
+                                <p class="text-sm text-gray-500">
+                                    Bangalore, India
+                                </p>
+
+                                <p class="text-sm text-gray-500">
+                                    2020 – 2021
+                                </p>
+
+                            </div>
+
                         </div>
                     </div>
-                </div>
 
-                <!-- Placeholder Project 2 -->
-                <div class="glass-effect rounded-lg p-6 flex flex-col hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2">
-                    <h3 class="text-xl font-bold text-white mb-2">Upcoming MS Project</h3>
-                    <p class="text-gray-400 mb-4 flex-grow">I am actively working on new projects as part of my
-                        coursework at the University at Buffalo. This space will feature my work in areas like Natural
-                        Language Processing and Deep Learning. Stay tuned!</p>
-                    <div class="mt-auto">
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-purple-900/50 text-purple-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">NLP</span>
-                            <span class="bg-purple-900/50 text-purple-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">PyTorch</span>
-                            <span class="bg-purple-900/50 text-purple-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Deep Learning</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <span class="text-gray-500 font-medium">Coming Soon</span>
+                    <!-- underGrad -->
+                    <div class="glass-effect rounded-lg p-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <img src="assets/logos/vtu_undergrad.png" alt="VTU logo"
+                                    class="w-14 h-14 flex rounded-md" />
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">
+                                    Visvesvaraya Technological University
+                                </h3>
+
+                                <p class="text-gray-300">
+                                    Bachelor of Engineering in Electronics & Communication
+                                </p>
+
+                                <p class="text-sm text-gray-500">
+                                    Bangalore, India
+                                </p>
+
+                                <p class="text-sm text-gray-500">
+                                    2015 – 2019
+                                </p>
+
+                            </div>
+
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
-            <div class="mt-8 flex justify-center items-center space-x-6">
-               
-                <a href="https://github.com/shubhamkragrawal" target="_blank"
-                   class="text-gray-400 hover:text-blue-400 transition-colors"> <!-- Add your GitHub Link -->
-                    View more at <i data-lucide="github" class="w-4 h-4 inline-block"></i>
-                    
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 ">
+            <div class="container mx-auto px-5">
+                <h2 class="section-heading text-white">Projects</h2>
+                <p class="section-subheading">A selection of my academic and personal projects. More to come from my
+                    Master's program!</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Placeholder Project 1 -->
+                    <div
+                        class="glass-effect rounded-lg p-6 flex flex-col hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2">
+                        <h3 class="text-xl font-bold text-white mb-2">Predictive Modeling for Customer Behavior</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">Developed a logistic regression model to predict
+                            customer
+                            churn with high accuracy. Leveraged Scikit-learn for training and Pandas for extensive data
+                            preprocessing and feature engineering.</p>
+                        <div class="mt-auto">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="bg-blue-900/50 text-blue-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Python</span>
+                                <span
+                                    class="bg-blue-900/50 text-blue-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Scikit-learn</span>
+                                <span
+                                    class="bg-blue-900/50 text-blue-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Pandas</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-blue-400 hover:text-blue-300 font-medium">View on GitHub
+                                    &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terrain Smart Safety System -->
+                    <div
+                        class="glass-effect rounded-lg p-6 flex flex-col hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2">
+                        <h3 class="text-xl font-bold text-white mb-2">Terrain Smart Safety System</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">Co-developed an award-winning IoT prototype to mitigate
+                            accidents on hazardous roads using an RFID sensor network and an emergency broadcast system.
+                            My
+                            role focused on backend logic and hardware programming.</p>
+                        <div class="mt-auto">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="bg-green-900/50 text-green-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Python</span>
+                                <span
+                                    class="bg-green-900/50 text-green-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Arduino</span>
+                                <span
+                                    class="bg-green-900/50 text-green-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Embedded
+                                    C</span>
+                                <span
+                                    class="bg-green-900/50 text-green-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">IoT</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="https://doi.org/10.1007/978-981-10-8201-6_54" target="_blank"
+                                    class="text-blue-400 hover:text-blue-300 font-medium">Read Publication &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Placeholder Project 2 -->
+                    <div
+                        class="glass-effect rounded-lg p-6 flex flex-col hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2">
+                        <h3 class="text-xl font-bold text-white mb-2">Upcoming MS Project</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">I am actively working on new projects as part of my
+                            coursework at the University at Buffalo. This space will feature my work in areas like
+                            Natural
+                            Language Processing and Deep Learning. Stay tuned!</p>
+                        <div class="mt-auto">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="bg-purple-900/50 text-purple-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">NLP</span>
+                                <span
+                                    class="bg-purple-900/50 text-purple-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">PyTorch</span>
+                                <span
+                                    class="bg-purple-900/50 text-purple-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Deep
+                                    Learning</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <span class="text-gray-500 font-medium">Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="mt-8 flex justify-center items-center space-x-6">
+
+                    <a href="https://github.com/shubhamkragrawal" target="_blank"
+                        class="text-gray-400 hover:text-blue-400 transition-colors"> <!-- Add your GitHub Link -->
+                        View more at <i data-lucide="github" class="w-4 h-4 inline-block"></i>
+
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-6">
+                <h2 class="section-heading text-white">Core Competencies</h2>
+                <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+                    <div class="flex flex-col items-center">
+                        <div class="icon-circle"><i data-lucide="code-2" class="w-10 h-10 text-blue-400"></i></div>
+                        <h3 class="text-lg font-bold mt-4 text-white">Languages</h3>
+                        <p class="text-gray-400">Python, SQL</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="icon-circle"><i data-lucide="database" class="w-10 h-10 text-blue-400"></i></div>
+                        <h3 class="text-lg font-bold mt-4 text-white">Databases</h3>
+                        <p class="text-gray-400">Snowflake, Firebase</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="icon-circle"><i data-lucide="bar-chart-3" class="w-10 h-10 text-blue-400"></i></div>
+                        <h3 class="text-lg font-bold mt-4 text-white">BI & Visualization</h3>
+                        <p class="text-gray-400">Tableau, Grafana</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="icon-circle"><i data-lucide="brain-circuit" class="w-10 h-10 text-blue-400"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mt-4 text-white">ML & Libraries</h3>
+                        <p class="text-gray-400">Scikit-learn, Pandas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section id="recommendations" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-heading text-white">Recommendations</h2>
+                <p class="section-subheading">
+                    What colleagues, managers, and mentors have said about working with me.
+                </p>
+
+                <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <!-- Recommendation Jeff-->
+                    <div class="glass-effect rounded-lg p-6">
+                        <p class="text-gray-300 italic mb-6">
+                            Shubham was an invaluable collaborator in the ideation and execution of a critical Tableau
+                            dashboard for the tracking of extensive sales play metrics. He surfaced key insights, noted
+                            potential pitfalls, was always realistic about timelines and was an absolute joy to work
+                            with. I would love to work with Shubham again and cannot recommend him any more highly!
+                        </p>
+
+                        <div class="flex items-center space-x-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold">
+                                Jeff
+                            </div>
+                            <div>
+                                <p class="text-white font-semibold">
+                                    Jeff Pickett
+                                </p>
+                                <p class="text-sm text-gray-400">
+                                    Senior Commercial Offerings Manager <br> Pure Storage
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recommendation Card Cem -->
+                    <div class="glass-effect rounded-lg p-6">
+                        <p class="text-gray-300 italic mb-6">
+                            I had the pleasure of working with Shubham for nearly two years. He was an integral part of
+                            our analytics team and was working closely with the Product & UX team. Throughout our time
+                            working together, Shubham demonstrated exceptional analytical skills and a strong ability to
+                            translate complex data into actionable insights that informed critical business decisions.
+                            What stood out most was his problem-solving approach. He not only identified the root causes
+                            behind key business challenges but also proposed data-driven solutions that had measurable
+                            impact. Shubham was equally effective in managing relationships with stakeholders and
+                            clients, often acting as the bridge between technical and non-technical teams. His clarity
+                            in communication, attention to detail, and ability to understand business objectives made
+                            him a trusted partner across departments.
+                            Shubham’s professionalism, curiosity, and commitment to delivering high-quality results make
+                            him an asset to any team. I am confident that he will continue to excel and bring
+                            significant value to any organization he works with in the future.
+                        </p>
+
+                        <div class="flex items-center space-x-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold">
+                                Cem
+                            </div>
+                            <div>
+                                <p class="text-white font-semibold">Cem Aladogan</p>
+                                <p class="text-sm text-gray-400"> Head of Product <br> BlueOptima</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recommendation Card Siva-->
+                    <div class="glass-effect rounded-lg p-6">
+                        <p class="text-gray-300 italic mb-6">
+                            I had the pleasure of working closely with Shubham during his time as a Data Analyst at
+                            BlueOptima.
+                            As a Data Analyst, he had a great way of breaking down complex data problems and turning
+                            them into
+                            insights that actually made sense and drove action.
+                            What stood out most to me was Shubham’s approach to work - calm and genuinely curious.
+                            He asked the right questions, paid attention to details, and was always willing to help
+                            others understand the data better. On top of that, he was a great team player.
+                            I’d happily recommend Shubham to any team looking for someone with good Data Analytics
+                            skills.
+                            I wish him all the very best in whatever he takes on next.
+                        </p>
+
+                        <div class="flex items-center space-x-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold">
+                                <!-- Initials -->
+                                Siva
+                            </div>
+                            <div>
+                                <p class="text-white font-semibold">
+                                    Sivagnanam Namasivayamurthy
+                                </p>
+                                <p class="text-sm text-gray-400">
+                                    Lead Machine Learning Data Engineer <br> BlueOptima
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recommendation Card Varinda-->
+                    <div class="glass-effect rounded-lg p-6">
+                        <p class="text-gray-300 italic mb-6">
+                            I had the pleasure of working alongside Shubham at BlueOptima He is remarkably diligent and
+                            talented data analyst. What truly sets him apart is his unwavering work ethic and his knack
+                            for identifying key trends in large datasets. He consistently delivered high-quality work,
+                            and his enthusiasm was contagious. I'm confident Shubham would be a valuable asset to any
+                            organization.
+                        </p>
+
+                        <div class="flex items-center space-x-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold">
+                                Var
+                            </div>
+                            <div>
+                                <p class="text-white font-semibold">
+                                    Varinda Rani
+                                </p>
+                                <p class="text-sm text-gray-400">
+                                    Machine Learning Data Engineer <br> BlueOptima
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-heading text-white">Get In Touch</h2>
+                <p class="section-subheading">I am actively seeking Data Scientist internship opportunities for Summer
+                    2026
+                    and would love to connect. Please feel free to reach out!</p>
+                <a href="mailto:agrawal.kshubham@gmail.com"
+                    class="inline-block accent-bg text-white font-bold py-3 px-8 rounded-full text-lg accent-bg-hover transition-transform transform hover:scale-105">
+                    Say Hello
                 </a>
-                
             </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-6">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2025 Shubham Kumar Agrawal. All Rights Reserved.</p>
         </div>
-    </section>
+    </footer>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-gray-800/50">
-        <div class="container mx-auto px-6">
-            <h2 class="section-heading text-white">Core Competencies</h2>
-            <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <script>
+        lucide.createIcons();
 
-                <div class="flex flex-col items-center">
-                    <div class="icon-circle"><i data-lucide="code-2" class="w-10 h-10 text-blue-400"></i></div>
-                    <h3 class="text-lg font-bold mt-4 text-white">Languages</h3>
-                    <p class="text-gray-400">Python, SQL</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="icon-circle"><i data-lucide="database" class="w-10 h-10 text-blue-400"></i></div>
-                    <h3 class="text-lg font-bold mt-4 text-white">Databases</h3>
-                    <p class="text-gray-400">Snowflake, Firebase</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="icon-circle"><i data-lucide="bar-chart-3" class="w-10 h-10 text-blue-400"></i></div>
-                    <h3 class="text-lg font-bold mt-4 text-white">BI & Visualization</h3>
-                    <p class="text-gray-400">Tableau, Grafana</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="icon-circle"><i data-lucide="brain-circuit" class="w-10 h-10 text-blue-400"></i></div>
-                    <h3 class="text-lg font-bold mt-4 text-white">ML & Libraries</h3>
-                    <p class="text-gray-400">Scikit-learn, Pandas</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Recommendations Section -->
-    <section id="recommendations" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="section-heading text-white">Recommendations</h2>
-            <p class="section-subheading">
-                What colleagues, managers, and mentors have said about working with me.
-            </p>
-
-            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-
-                <!-- Recommendation Card -->
-                <div class="glass-effect rounded-lg p-6">
-                    <p class="text-gray-300 italic mb-6">
-                        “<!-- Recommendation text goes here. Keep it 3–5 lines for best visual balance. -->”
-                    </p>
-
-                    <div class="flex items-center space-x-4">
-                        <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold">
-                            <!-- Initials -->
-                            AB
-                        </div>
-                        <div>
-                            <p class="text-white font-semibold">
-                                <!-- Recommender Name -->
-                                Full Name
-                            </p>
-                            <p class="text-sm text-gray-400">
-                                <!-- Title & Company -->
-                                Role · Company
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Recommendation Card -->
-                <div class="glass-effect rounded-lg p-6">
-                    <p class="text-gray-300 italic mb-6">
-                        “<!-- Another recommendation placeholder -->”
-                    </p>
-
-                    <div class="flex items-center space-x-4">
-                        <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold">
-                            CD
-                        </div>
-                        <div>
-                            <p class="text-white font-semibold">Full Name</p>
-                            <p class="text-sm text-gray-400">Role · Company</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-800/50">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="section-heading text-white">Get In Touch</h2>
-            <p class="section-subheading">I am actively seeking Data Scientist internship opportunities for Summer 2026
-                and would love to connect. Please feel free to reach out!</p>
-            <a href="mailto:agrawal.kshubham@gmail.com"
-               class="inline-block accent-bg text-white font-bold py-3 px-8 rounded-full text-lg accent-bg-hover transition-transform transform hover:scale-105">
-                Say Hello
-            </a>
-        </div>
-    </section>
-</main>
-
-<!-- Footer -->
-<footer class="bg-gray-900 py-6">
-    <div class="container mx-auto px-6 text-center text-gray-500">
-        <p>&copy; 2025 Shubham Kumar Agrawal. All Rights Reserved.</p>
-    </div>
-</footer>
-
-<script>
-    lucide.createIcons();
-
-    // Mobile menu toggle
-    const menuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-
-    // Close mobile menu on link click
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
-    });
-</script>
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
+
 </html>
