@@ -47,7 +47,7 @@
     nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
     .brand { text-decoration: none; font-weight: 850; letter-spacing: -.03em; }
     .brand span { color: var(--accent); }
-    .nav-links { display: flex; align-items: center; gap: 1.45rem; }
+    .nav-links { display: flex; align-items: center; gap: 1.1rem; }
     .nav-links a { text-decoration: none; color: var(--muted); font-size: .92rem; font-weight: 650; }
     .nav-links a:hover, .nav-links a:focus-visible { color: var(--ink); }
     .menu-button { display: none; border: 1px solid var(--line); color: var(--ink); background: var(--surface); border-radius: 10px; padding: .55rem .72rem; font: inherit; font-weight: 700; }
@@ -98,6 +98,13 @@
     .experience-body ul { margin: 0; padding-left: 1.15rem; color: var(--muted); }
     .experience-body li + li { margin-top: .55rem; }
     .inline-link { color: var(--accent); text-underline-offset: .2rem; }
+    .research-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .research-card { display: flex; flex-direction: column; min-height: 360px; padding: clamp(1.35rem, 3vw, 2rem); border: 1px solid var(--line); border-radius: var(--radius); background: rgba(255,255,255,.018); }
+    .research-card h3 { margin: 1rem 0 .7rem; font-size: clamp(1.35rem, 2.4vw, 1.9rem); line-height: 1.12; letter-spacing: -.035em; }
+    .research-card p { margin: 0; color: var(--muted); }
+    .research-card .result { margin-top: 1rem; padding-left: .85rem; border-left: 2px solid var(--accent); color: var(--ink); font-weight: 650; }
+    .research-card .tags { margin-top: auto; padding-top: 1.5rem; }
+    .research-card .boundary { margin-top: 0 !important; }
     .capabilities { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
     .capability { padding: 1.45rem; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.018); }
     .capability h3 { margin: 0 0 .7rem; font-size: 1.08rem; }
@@ -121,7 +128,7 @@
       .proof-item:nth-child(2) { border-right: 0; }
       .proof-item:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
       .project, .project.featured, .project.side { grid-column: span 12; min-height: 350px; }
-      .capabilities, .principles { grid-template-columns: repeat(2, 1fr); }
+      .research-grid, .capabilities, .principles { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 700px) {
       .menu-button { display: inline-block; }
@@ -130,7 +137,7 @@
       .nav-links a { padding: .65rem .6rem; }
       h1 { font-size: clamp(3rem, 16vw, 5rem); }
       .experience { grid-template-columns: 1fr; gap: .8rem; }
-      .capabilities, .principles { grid-template-columns: 1fr; }
+      .research-grid, .capabilities, .principles { grid-template-columns: 1fr; }
       .footer-row { flex-direction: column; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
@@ -142,7 +149,7 @@
     <nav class="shell" aria-label="Primary navigation">
       <a class="brand" href="#top" aria-label="Shubham Kumar Agrawal, home">SKA<span>.</span></a>
       <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="navLinks">Menu</button>
-      <div class="nav-links" id="navLinks"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#capabilities">Capabilities</a><a href="#contact">Contact</a></div>
+      <div class="nav-links" id="navLinks"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#research">Research</a><a href="#education">Education</a><a href="#capabilities">Capabilities</a><a href="#contact">Contact</a></div>
     </nav>
   </header>
 
@@ -180,9 +187,19 @@
 
     <section class="section-rule" id="experience"><div class="shell">
       <div class="section-head"><div><p class="eyebrow">Experience</p><h2>Research depth. Commercial context.</h2></div><p>Nearly five years in industry taught me to translate technical work into decisions, collaborate across delivery teams, and support demanding users. My current graduate work adds deeper AI and research-system practice.</p></div>
-      <article class="experience"><div class="experience-meta"><h3>University at Buffalo</h3><p>Research Assistant · Oct 2025–Present</p></div><div class="experience-body"><h4>Research software and applied AI</h4><ul><li>Build human-in-the-loop data and AI workflows for clinical-pharmacology research, with detailed work kept private.</li><li>Mentor two undergraduate Pharmaceutical Science students and one MS Computer Science student through work review, progress tracking, recurring meetings, and deliverable approval.</li></ul></div></article>
+      <article class="experience"><div class="experience-meta"><h3>University at Buffalo</h3><p>Research Assistant · Oct 2025–Present</p></div><div class="experience-body"><h4>Research software and applied AI</h4><ul><li>Develop human-in-the-loop FDA document intelligence, regulatory-text analysis, ontology enrichment, and provenance-aware retrieval components for clinical-pharmacology research.</li><li>Mentor two undergraduate Pharmaceutical Science students and one MS Computer Science student through work review, progress tracking, recurring meetings, and deliverable approval.</li></ul></div></article>
       <article class="experience"><div class="experience-meta"><h3>Everpure</h3><p>Senior Business Analyst · Sep 2024–Jun 2025</p></div><div class="experience-body"><h4>Executive analytics on Snowflake and Tableau</h4><ul><li>Built decision-facing dashboards and aligned KPI definitions and transformation logic across sales, operations, and leadership stakeholders.</li></ul></div></article>
       <article class="experience"><div class="experience-meta"><h3>BlueOptima</h3><p>Data & ML roles · Oct 2020–May 2024</p></div><div class="experience-body"><h4>ML product R&D, engineering analytics, and client delivery</h4><ul><li>Led a LightGBM, agglomerative-clustering, and SHAP R&D initiative incorporated into <a class="inline-link" href="https://www.blueoptima.com/platform/performance-insights" target="_blank" rel="noreferrer">Performance Insights ↗</a>; led internal/client alpha-beta testing, coordinated backend release handoffs, and supported senior engineering and C-suite users after release.</li><li>Developed 30+ engineering-productivity metrics across 50+ enterprise clients.</li><li>Automated <a class="inline-link" href="https://www.blueoptima.com/platform/global-benchmark" target="_blank" rel="noreferrer">Global Benchmark ↗</a> reporting with Python and Tableau, saving 160+ hours of manual work per quarter.</li><li>Built Java/Python client-server ETL into centralized PostgreSQL and Grafana for Customer Success data-quality investigations.</li></ul></div></article>
+    </div></section>
+
+    <section class="section-rule" id="research"><div class="shell">
+      <div class="section-head"><div><p class="eyebrow">University at Buffalo research</p><h2>Regulated-domain AI with traceable evidence.</h2></div><p>These workstreams form one collaborative Research Assistant program. The aggregate context and results are shared here; lab code, derived corpora, annotations, reviewer data, internal reports, and unpublished artifacts remain private.</p></div>
+      <div class="research-grid">
+        <article class="research-card"><span class="label">Document intelligence</span><h3>Evidence-preserving FDA review extraction</h3><p>Developed a human-in-the-loop pipeline using PDF parsing, OCR, deterministic extraction, bounded model-assisted structure detection, SQLite, and Streamlit.</p><p class="result">Produced 4,170 source-cited section and question-answer records from 243 FDA clinical-pharmacology review documents; the complete local suite passed 315 tests.</p><div class="tags"><span class="tag">Python</span><span class="tag">OCR</span><span class="tag">SQLite</span><span class="tag">Streamlit</span><span class="tag">Human review</span></div><p class="boundary">The records are verification-ready extraction rows—not 4,170 human-validated clinical facts. The system is not FDA-built, FDA-deployed, or clinical decision support.</p></article>
+        <article class="research-card"><span class="label">Statistical NLP</span><h3>Regulatory-pathway text analysis</h3><p>Designed a three-arm study of public FDA reviews using TF-IDF, biomedical sentence embeddings, document-level inference, permutation tests, bootstrap analysis, and prespecified checks for therapeutic-area, reviewer, length, product-name, and reference-family confounds.</p><p class="result">Analyzed 148 documents and 10,839 labeled sections; found within-corpus 351(k) pathway distinctiveness while the original greater-homogeneity hypotheses were not supported.</p><div class="tags"><span class="tag">TF-IDF</span><span class="tag">Biomedical embeddings</span><span class="tag">Permutation tests</span><span class="tag">Bootstrap</span></div><p class="boundary">This does not establish faster approval, review quality, causal reviewer behavior, or guaranteed future classifier performance.</p></article>
+        <article class="research-card"><span class="label">Ontology & retrieval</span><h3>Drug knowledge and provenance components</h3><p>Built RxNorm/RxClass enrichment and ATC/EPC/MOA similarity analyses, auditing identity, formulation, route, and combination-product mapping failures. Also designed and implemented components of a source-attributed knowledge system.</p><p class="result">The inspected mapping artifact contained 10,429 source rows and 4,858 unique canonical names; knowledge-system components used Python, PostgreSQL/pgvector, ChromaDB, sentence-transformer embeddings, and Streamlit.</p><div class="tags"><span class="tag">RxNorm / RxClass</span><span class="tag">ATC / EPC / MOA</span><span class="tag">pgvector</span><span class="tag">ChromaDB</span></div><p class="boundary">These are research components, not a currently verified integrated production platform; 10,429 rows must not be presented as 10,429 unique drugs.</p></article>
+        <article class="research-card"><span class="label">Rubric analysis & leadership</span><h3>Separating template language from substantive evidence</h3><p>Analyzed question, answer, heading, and reviewer-comment streams through a ten-rubric framework with model-assisted scoring, concern canonicalization, semantic embeddings, and ontology-distance analysis.</p><p class="result">Studied 303 QBR and reviewer-comment items across 23 curated ATC-L drugs, finding that templated questions and generic headings inflated apparent similarity relative to substantive answers and comments.</p><div class="tags"><span class="tag">Rubric design</span><span class="tag">Semantic analysis</span><span class="tag">Failure analysis</span><span class="tag">Mentorship</span></div><p class="boundary">Taxonomy checks showed material disagreement on several rubrics and no independent expert inter-rater validation. I technically coordinate three student researchers; scientific ownership remains collaborative.</p></article>
+      </div>
     </div></section>
 
     <section class="section-rule" id="education"><div class="shell">
@@ -195,10 +212,10 @@
     <section class="section-rule" id="capabilities"><div class="shell">
       <div class="section-head"><div><p class="eyebrow">Capabilities</p><h2>A practical, evidence-backed toolbox.</h2></div><p>These are technologies and methods represented across industry work, research, and public systems. Depth varies by context; the project links show where each was applied.</p></div>
       <div class="capabilities">
-        <div class="capability"><h3>Programming & data</h3><p>Python, SQL, Java, R, PostgreSQL, SQLite, Snowflake, DuckDB, Parquet, PyArrow, dbt, Airflow, ETL and data modeling.</p></div>
-        <div class="capability"><h3>Machine learning</h3><p>PyTorch, scikit-learn, XGBoost, LightGBM, Optuna, SHAP, clustering, classification, calibration, conformal prediction and leakage-aware validation.</p></div>
+        <div class="capability"><h3>Programming & data</h3><p>Python, SQL, Java, R, PostgreSQL, pgvector, SQLite, Snowflake, DuckDB, Parquet, PyArrow, dbt, Airflow, ETL and data modeling.</p></div>
+        <div class="capability"><h3>Machine learning & statistics</h3><p>PyTorch, scikit-learn, XGBoost, LightGBM, Optuna, SHAP, clustering, classification, calibration, conformal prediction, permutation tests, bootstrap analysis, confound checks and leakage-aware validation.</p></div>
         <div class="capability"><h3>LLM training & alignment</h3><p>Transformers, Qwen, PEFT/LoRA, TRL, SFT, DPO, PPO, RLAIF, preference generation, reward design and failure analysis.</p></div>
-        <div class="capability"><h3>Reliable AI systems</h3><p>Typed tools, Pydantic, MCP, structured outputs, bounded orchestration, citation grounding, retrieval, deterministic gates, retry and budget controls.</p></div>
+        <div class="capability"><h3>Reliable AI & retrieval</h3><p>Typed tools, Pydantic, MCP, structured outputs, bounded orchestration, citation grounding, OCR, TF-IDF, biomedical embeddings, ChromaDB, human review, deterministic gates, retry and budget controls.</p></div>
         <div class="capability"><h3>Delivery & MLOps</h3><p>FastAPI, Streamlit, Docker, GitHub Actions, MLflow, pytest, Ruff, mypy, Vertex AI, Amazon Bedrock, CloudWatch and local Kubernetes/K3d.</p></div>
         <div class="capability"><h3>Analytics & communication</h3><p>Tableau, Grafana, KPI and metric design, executive reporting, technical client support, R&D leadership and cross-functional delivery.</p></div>
       </div>

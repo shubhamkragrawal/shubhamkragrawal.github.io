@@ -2,7 +2,7 @@
 
 Static source for [shubhamkragrawal.github.io](https://shubhamkragrawal.github.io/).
 
-The site presents selected Applied AI, Data Science, ML product, and data-platform work with explicit evaluation boundaries. It intentionally excludes private University at Buffalo research artifacts.
+The site presents selected Applied AI, Data Science, ML product, data-platform, and University at Buffalo research work with explicit evaluation boundaries. It shares defensible aggregate research context and results while excluding private code, derived corpora, annotations, reviewer data, internal reports, and unpublished artifacts.
 
 ## Local preview
 
