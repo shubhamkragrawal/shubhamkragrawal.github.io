@@ -1,710 +1,225 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubham Kumar Agrawal | Data Scientist Portfolio</title>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #d1d5db;
-            margin: 0;
-        }
-
-        /* Fixed full-screen background (NOT entire page height) */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-
-            background-image: url('assets/bg/test_bg.png');
-            background-size: cover;          /* fills screen only */
-            background-position: center;
-            background-repeat: no-repeat;
-
-            /* Dark overlay */
-            background-color: rgba(0, 0, 0, 0.65);
-            background-blend-mode: overlay;
-
-            z-index: -1;
-        }
-
-        .glass-effect {
-            background: rgba(31, 41, 55, 0.5);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .accent-color {
-            color: #60a5fa;
-        }
-
-        .accent-bg {
-            background-color: #3b82f6;
-        }
-
-        .accent-bg-hover:hover {
-            background-color: #2563eb;
-        }
-
-        .section-heading {
-            font-size: 2.25rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .section-subheading {
-            font-size: 1.25rem;
-            color: #9ca3af;
-            text-align: center;
-            margin-bottom: 4rem;
-            max-width: 3xl;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .icon-circle {
-            background-color: rgba(59, 130, 246, 0.1);
-            border-radius: 9999px;
-            padding: 0.75rem;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shubham Kumar Agrawal is an Applied AI Engineer and Data Scientist building evidence-grounded LLM, ML, and data systems.">
+  <meta name="theme-color" content="#08110f">
+  <meta property="og:title" content="Shubham Kumar Agrawal — Applied AI &amp; Data Science">
+  <meta property="og:description" content="LLM alignment, reliable AI workflows, calibrated machine learning, and data products with measurable evidence.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shubhamkragrawal.github.io/">
+  <link rel="canonical" href="https://shubhamkragrawal.github.io/">
+  <title>Shubham Kumar Agrawal — Applied AI Engineer &amp; Data Scientist</title>
+  <style>
+    :root {
+      --ink: #eff7f2;
+      --muted: #a9b9b0;
+      --dim: #71827a;
+      --surface: #0d1916;
+      --surface-2: #12221d;
+      --line: rgba(219, 241, 228, .13);
+      --accent: #8af0bd;
+      --accent-2: #67b7ff;
+      --warm: #ffc77d;
+      --max: 1180px;
+      --radius: 20px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: radial-gradient(circle at 85% 5%, rgba(103,183,255,.11), transparent 28rem), radial-gradient(circle at 12% 24%, rgba(138,240,189,.09), transparent 30rem), #08110f;
+      font: 16px/1.65 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .skip-link { position: fixed; left: 1rem; top: -5rem; z-index: 100; background: var(--accent); color: #06100c; padding: .7rem 1rem; border-radius: 10px; font-weight: 800; }
+    .skip-link:focus { top: 1rem; }
+    .shell { width: min(calc(100% - 2rem), var(--max)); margin: 0 auto; }
+    .eyebrow { margin: 0 0 .8rem; color: var(--accent); text-transform: uppercase; letter-spacing: .16em; font-size: .76rem; font-weight: 800; }
+    .muted { color: var(--muted); }
+    .label { display: inline-flex; align-items: center; gap: .45rem; padding: .32rem .65rem; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: .76rem; font-weight: 750; letter-spacing: .03em; }
+    .label::before { content: ""; width: .42rem; height: .42rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px rgba(138,240,189,.08); }
+    header { position: sticky; top: 0; z-index: 20; background: rgba(8,17,15,.86); border-bottom: 1px solid var(--line); backdrop-filter: blur(18px); }
+    nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .brand { text-decoration: none; font-weight: 850; letter-spacing: -.03em; }
+    .brand span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 1.45rem; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: .92rem; font-weight: 650; }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--ink); }
+    .menu-button { display: none; border: 1px solid var(--line); color: var(--ink); background: var(--surface); border-radius: 10px; padding: .55rem .72rem; font: inherit; font-weight: 700; }
+    .hero { padding: clamp(5rem, 10vw, 8.6rem) 0 4.5rem; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(270px, .7fr); gap: clamp(2rem, 7vw, 6rem); align-items: end; }
+    h1 { margin: 0; max-width: 850px; font-size: clamp(3.35rem, 8vw, 7.25rem); line-height: .94; letter-spacing: -.074em; }
+    h1 span { color: var(--accent); }
+    .hero-copy { max-width: 760px; margin: 2rem 0 0; color: var(--muted); font-size: clamp(1.1rem, 2vw, 1.35rem); }
+    .hero-copy strong { color: var(--ink); font-weight: 700; }
+    .actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: .45rem; min-height: 48px; padding: .72rem 1.05rem; border-radius: 12px; text-decoration: none; font-weight: 780; border: 1px solid var(--line); transition: transform .18s ease, background .18s ease, border-color .18s ease; }
+    .button.primary { background: var(--accent); border-color: var(--accent); color: #06100c; }
+    .button.secondary { background: rgba(255,255,255,.025); }
+    .button:hover { transform: translateY(-2px); border-color: rgba(138,240,189,.55); }
+    .availability { padding: 1.3rem; border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(145deg, rgba(138,240,189,.06), rgba(103,183,255,.03)); }
+    .availability h2 { margin: .8rem 0 .35rem; font-size: 1.25rem; letter-spacing: -.025em; }
+    .availability p { margin: .35rem 0; color: var(--muted); }
+    .proof { padding: 1rem 0 5.5rem; }
+    .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-block: 1px solid var(--line); }
+    .proof-item { padding: 1.6rem 1.2rem; border-right: 1px solid var(--line); }
+    .proof-item:last-child { border-right: 0; }
+    .proof-value { display: block; color: var(--accent); font-size: clamp(1.55rem, 3vw, 2.25rem); font-weight: 880; letter-spacing: -.05em; }
+    .proof-item p { margin: .2rem 0 0; color: var(--muted); font-size: .88rem; line-height: 1.4; }
+    section { padding: 5.5rem 0; scroll-margin-top: 75px; }
+    .section-head { display: grid; grid-template-columns: .72fr 1.28fr; gap: 2rem; margin-bottom: 2.5rem; align-items: start; }
+    .section-head h2 { margin: 0; font-size: clamp(2.1rem, 5vw, 3.8rem); line-height: 1.03; letter-spacing: -.055em; }
+    .section-head p { max-width: 700px; margin: .15rem 0 0 auto; color: var(--muted); font-size: 1.05rem; }
+    .section-rule { border-top: 1px solid var(--line); }
+    .project-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; }
+    .project { grid-column: span 6; min-height: 390px; display: flex; flex-direction: column; padding: clamp(1.35rem, 3vw, 2rem); border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(150deg, rgba(18,34,29,.98), rgba(10,21,18,.98)); overflow: hidden; position: relative; }
+    .project.featured { grid-column: span 8; }
+    .project.side { grid-column: span 4; }
+    .project::after { content: attr(data-index); position: absolute; right: 1.1rem; top: .35rem; color: rgba(239,247,242,.035); font-size: 8rem; font-weight: 900; line-height: 1; pointer-events: none; }
+    .project h3 { position: relative; z-index: 1; margin: 1rem 0 .75rem; max-width: 88%; font-size: clamp(1.6rem, 3vw, 2.35rem); line-height: 1.08; letter-spacing: -.045em; }
+    .project p { position: relative; z-index: 1; margin: 0; color: var(--muted); }
+    .project .result { margin-top: 1.2rem; padding-left: .85rem; border-left: 2px solid var(--accent); color: var(--ink); font-weight: 650; }
+    .project-footer { position: relative; z-index: 1; margin-top: auto; padding-top: 2rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: 1.25rem; }
+    .tag { padding: .28rem .58rem; border-radius: 7px; background: rgba(103,183,255,.08); color: #bcdcff; font-size: .75rem; font-weight: 680; }
+    .project-links { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .project-links a { color: var(--accent); text-underline-offset: .22rem; font-weight: 750; }
+    .boundary { margin-top: 1.15rem !important; color: var(--dim) !important; font-size: .79rem; }
+    .experience { display: grid; grid-template-columns: 250px 1fr; gap: 2.25rem; padding: 2rem 0; border-top: 1px solid var(--line); }
+    .experience:last-child { border-bottom: 1px solid var(--line); }
+    .experience-meta h3 { margin: 0 0 .2rem; font-size: 1.15rem; }
+    .experience-meta p { margin: 0; color: var(--dim); font-size: .9rem; }
+    .experience-body h4 { margin: 0 0 .75rem; font-size: 1.3rem; letter-spacing: -.025em; }
+    .experience-body ul { margin: 0; padding-left: 1.15rem; color: var(--muted); }
+    .experience-body li + li { margin-top: .55rem; }
+    .inline-link { color: var(--accent); text-underline-offset: .2rem; }
+    .capabilities { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .capability { padding: 1.45rem; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.018); }
+    .capability h3 { margin: 0 0 .7rem; font-size: 1.08rem; }
+    .capability p { margin: 0; color: var(--muted); font-size: .9rem; }
+    .note { margin-top: 1rem; padding: 1rem 1.15rem; border-radius: 12px; background: rgba(255,199,125,.07); color: #e4cdaa; font-size: .88rem; }
+    .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .principle { padding: 1.5rem 0 0; border-top: 2px solid var(--line); }
+    .principle strong { display: block; color: var(--warm); font-size: 1rem; }
+    .principle p { margin: .5rem 0 0; color: var(--muted); }
+    .contact { padding-bottom: 7rem; }
+    .contact-card { padding: clamp(2rem, 6vw, 5rem); border: 1px solid rgba(138,240,189,.24); border-radius: 28px; text-align: center; background: radial-gradient(circle at 50% 0, rgba(138,240,189,.12), transparent 65%), var(--surface); }
+    .contact-card h2 { margin: 0 auto 1rem; max-width: 800px; font-size: clamp(2.3rem, 6vw, 5.2rem); line-height: .98; letter-spacing: -.065em; }
+    .contact-card p { margin: 0 auto; max-width: 660px; color: var(--muted); font-size: 1.08rem; }
+    footer { border-top: 1px solid var(--line); padding: 1.5rem 0; color: var(--dim); font-size: .86rem; }
+    .footer-row { display: flex; justify-content: space-between; gap: 1rem; }
+    :focus-visible { outline: 3px solid var(--accent-2); outline-offset: 4px; border-radius: 6px; }
+    @media (max-width: 900px) {
+      .hero-grid, .section-head { grid-template-columns: 1fr; }
+      .section-head p { margin-left: 0; }
+      .proof-grid { grid-template-columns: repeat(2, 1fr); }
+      .proof-item:nth-child(2) { border-right: 0; }
+      .proof-item:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .project, .project.featured, .project.side { grid-column: span 12; min-height: 350px; }
+      .capabilities, .principles { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 700px) {
+      .menu-button { display: inline-block; }
+      .nav-links { display: none; position: absolute; left: 1rem; right: 1rem; top: 62px; flex-direction: column; align-items: stretch; gap: 0; padding: .75rem; border: 1px solid var(--line); border-radius: 14px; background: #0b1713; box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: .65rem .6rem; }
+      h1 { font-size: clamp(3rem, 16vw, 5rem); }
+      .experience { grid-template-columns: 1fr; gap: .8rem; }
+      .capabilities, .principles { grid-template-columns: 1fr; }
+      .footer-row { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
+  </style>
 </head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <nav class="shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Shubham Kumar Agrawal, home">SKA<span>.</span></a>
+      <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="navLinks">Menu</button>
+      <div class="nav-links" id="navLinks"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#capabilities">Capabilities</a><a href="#contact">Contact</a></div>
+    </nav>
+  </header>
 
-
-
-<body class="antialiased">
-
-    <!-- Header & Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 glass-effect">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-white">Shubham Kumar Agrawal</a>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#about" class="text-gray-300 hover:text-blue-400 transition-colors">About</a>
-                <a href="#experience" class="text-gray-300 hover:text-blue-400 transition-colors">Experience</a>
-                <a href="#education" class="text-gray-300 hover:text-blue-400 transition-colors">Education</a>
-                <a href="#projects" class="text-gray-300 hover:text-blue-400 transition-colors">Projects</a>
-                <a href="#skills" class="text-gray-300 hover:text-blue-400 transition-colors">Skills</a>
-                <a href="#recommendations"
-                    class="text-gray-300 hover:text-blue-400 transition-colors">Recommendations</a>
-                <a href="#contact" class="text-gray-300 hover:text-blue-400 transition-colors">Contact</a>
-            </nav>
-            <button id="mobile-menu-button" class="md:hidden text-white">
-                <i data-lucide="menu"></i>
-            </button>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="shell hero-grid">
+        <div>
+          <p class="eyebrow">Applied AI · Data Science · ML products</p>
+          <h1>Systems that stay <span>grounded.</span></h1>
+          <p class="hero-copy">I’m <strong>Shubham Kumar Agrawal</strong>, an Applied AI Engineer and Data Scientist. I build from data pipelines and model training through evaluation, bounded AI workflows, and decision-ready products—with evidence for what works and clear limits on what it proves.</p>
+          <div class="actions"><a class="button primary" href="#work">Explore selected work ↓</a><a class="button secondary" href="https://github.com/shubhamkragrawal" target="_blank" rel="noreferrer">GitHub ↗</a><a class="button secondary" href="https://www.linkedin.com/in/shubham-kumar-agrawal/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#about" class="block py-2 text-gray-300 hover:text-blue-400 transition-colors">About</a>
-            <a href="#experience" class="block py-2 text-gray-300 hover:text-blue-400 transition-colors">Experience</a>
-            <a href="#education" class="block py-2 text-gray-300 hover:text-blue-400 transition-colors">Education</a>
-            <a href="#projects" class="block py-2 text-gray-300 hover:text-blue-400 transition-colors">Projects</a>
-            <a href="#skills" class="block py-2 text-gray-300 hover:text-blue-400 transition-colors">Skills</a>
-            <a href="#recommendations"
-                class="block py-2 text-gray-300 hover:text-blue-400 transition-colors">Recommendations</a>
-            <a href="#contact" class="block py-2 text-gray-300 hover:text-blue-400 transition-colors">Contact</a>
-        </div>
-    </header>
+        <aside class="availability" aria-label="Current status"><span class="label">Open to opportunities</span><h2>Targeting February 2027</h2><p>Applied AI, Data Science, and hands-on customer-facing AI roles.</p><p>Open to US relocation and on-site or hybrid work. Start subject to work authorization.</p></aside>
+      </div>
+    </section>
 
-    <main class="pt-24">
-        <!-- Hero Section -->
-        <section id="hero" class="relative py-20 ">
-           
-            <div class="relative container mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">
-                    Shubham Kumar Agrawal
-                </h1>
-                <p class="mt-4 text-xl md:text-3xl accent-color font-medium">
-                    M.S. in Data Science Student @ University at Buffalo
-                </p>
-                <p class="mt-6 max-w-3xl mx-auto text-xl text-gray-350">
-                    Accomplished Data and Business Analyst with 5 years of industry experience transforming complex data
-                    into business strategy.
-                    Now pursuing a Master's program to skill up to build and solve complex Data Science/Machine Learning
-                    problems helping real-world business grow.
-                </p>
-                <div class="mt-8 flex justify-center items-center space-x-6">
-                    <a href="https://www.linkedin.com/in/shubham-kumar-agrawal/" target="_blank"
-                        class="text-gray-400 hover:text-blue-400 transition-colors">
-                        <i data-lucide="linkedin" class="w-8 h-8"></i>
-                    </a>
-                    <a href="https://github.com/shubhamkragrawal" target="_blank"
-                        class="text-gray-400 hover:text-blue-400 transition-colors"> <!-- Add your GitHub Link -->
-                        <i data-lucide="github" class="w-8 h-8"></i>
-                    </a>
-                    <a href="mailto:agrawal.kshubham@gmail.com"
-                        class="text-gray-400 hover:text-blue-400 transition-colors">
-                        <i data-lucide="mail" class="w-8 h-8"></i>
-                    </a>
-                </div>
-                <div class="mt-10">
-                    <a href="https://drive.google.com/file/d/1G0BNiNJHUBHGiKW2sbYvRyaM8j0sIs4X/view?usp=sharing"
-                        target="_blank"
-                        class="accent-bg text-white font-bold py-3 px-8 rounded-full text-lg accent-bg-hover transition-transform transform hover:scale-105 inline-block">
-                        Download Resume
-                    </a>
-                </div>
-            </div>
-        </section>
+    <div class="shell proof" aria-label="Selected evidence"><div class="proof-grid">
+      <div class="proof-item"><span class="proof-value">425</span><p>automated tests across the released RLAIF system</p></div>
+      <div class="proof-item"><span class="proof-value">1.53M</span><p>flight-weather records materialized for Rerouted</p></div>
+      <div class="proof-item"><span class="proof-value">594K</span><p>clinical trials processed in PharmaPulse</p></div>
+      <div class="proof-item"><span class="proof-value">160+ hrs</span><p>manual Global Benchmark reporting saved per quarter</p></div>
+    </div></div>
 
-        <!-- About Me Section -->
-        <section id="about" class="py-20 bg-gray-800/50">
-            <div class="container mx-auto px-6">
-                <h2 class="section-heading text-white">About Me</h2>
-                <div class="max-w-4xl mx-auto text-center text-lg text-gray-300 space-y-6">
-                    <p>
-                    I’m a data professional with 5 years of industry experience and a strong curiosity for turning complex data into 
-                    actionable intelligence. I’ve worked across analytics and product-focused roles at companies like Pure Storage 
-                    and BlueOptima, where I built scalable dashboards, end-to-end data pipelines, and decision frameworks that
-                    supported business and product teams.
-                    </p>
-                    <p>
-                    After my undergraduate degree in Electronics, I took a deliberate career pivot into data—navigating challenges, failures,
-                     and continuous upskilling to build a solid foundation in analytics. That journey shaped my resilience and my appreciation 
-                     for learning things the right way.
-                    </p>
-                    <p>
-                    I’m currently pursuing an MS in Engineering Science – Data Science at the University at Buffalo to deepen my foundations
-                    in machine learning, databases, and applied AI. Alongside coursework, I contribute as a Research Assistant working on 
-                    LLMs, and regulatory data analysis, and actively engage in workshops, hackathons, and community learning.
-                    </p>
-                    <p>
-                    I thrive in collaborative environments, enjoy tackling ambiguous problems, and aim to build data-driven solutions that
-                     scale and create real-world impact.
-                    </p>
-                </div>
-            </div>
-        </section>
+    <section class="section-rule" id="work"><div class="shell">
+      <div class="section-head"><div><p class="eyebrow">Selected work</p><h2>Built end to end. Measured honestly.</h2></div><p>My portfolio connects model development with the less glamorous parts that make systems trustworthy: temporal splits, provenance, typed interfaces, deterministic controls, failure analysis, and release evidence.</p></div>
+      <div class="project-grid">
+        <article class="project featured" data-index="01"><span class="label">Flagship · Released</span><h3>RLAIF Flight Dialogue Alignment & Safety</h3><p>Solo Qwen 2.5 3B rebuild spanning immutable data splits, LoRA SFT, Gemini-ranked preference data, DPO, bounded and adaptive PPO, shared evaluation, and a deterministic transactional controller.</p><p class="result">Policy-only task success moved from 16% to 38% at the best PPO checkpoint; the integrated controller separately achieved valid transitions and grounded-entity precision across 200 scenarios.</p><div class="project-footer"><div class="tags"><span class="tag">PyTorch</span><span class="tag">Transformers</span><span class="tag">PEFT / LoRA</span><span class="tag">TRL</span><span class="tag">DPO / PPO</span><span class="tag">Vertex AI</span></div><div class="project-links"><a href="https://github.com/shubhamkragrawal/rlaif-airdialouge" target="_blank" rel="noreferrer">Repository ↗</a></div><p class="boundary">Boundary: 38% is policy performance. The integrated result includes deterministic validation and safe fallback; it is not 100% standalone model accuracy.</p></div></article>
+        <article class="project side" data-index="02"><span class="label">Current build · Local</span><h3>Rerouted</h3><p>Air-disruption decision support combining calibrated flight-risk modeling, dated regulatory retrieval, weather context, historical alternatives, typed tools, and deterministic entitlement resolution.</p><p class="result">1,531,942 BTS/NOAA records; deterministic baseline completed 80 synthetic cases with 200/200 expected citations.</p><div class="project-footer"><div class="tags"><span class="tag">Python</span><span class="tag">DuckDB</span><span class="tag">Parquet</span><span class="tag">Pydantic</span><span class="tag">FastAPI</span><span class="tag">MCP</span></div><p class="boundary">Work in progress. Baseline results are synthetic self-consistency checks, not human legal validation or final agent metrics.</p></div></article>
+        <article class="project" data-index="03"><span class="label">Healthcare AI · Public</span><h3>TrialGuard</h3><p>An evidence-linked clinical-trial planning second reviewer. Three bounded Bedrock roles gather and challenge evidence while deterministic gates validate citations, source passages, numbers, language, and release status.</p><p class="result">84 automated tests and seven fixed offline release behaviors.</p><div class="project-footer"><div class="tags"><span class="tag">Amazon Bedrock</span><span class="tag">FastAPI</span><span class="tag">Pydantic</span><span class="tag">Docker</span><span class="tag">CloudWatch</span></div><div class="project-links"><a href="https://github.com/shubhamkragrawal/TrialGuard" target="_blank" rel="noreferrer">Repository ↗</a></div><p class="boundary">Operational decision support—not clinical validation, regulatory advice, protocol recommendation, or go/no-go authority.</p></div></article>
+        <article class="project" data-index="04"><span class="label">Applied ML · Public</span><h3>TrialOutcome</h3><p>Clinical-trial outcome modeling with chronological validation, explicit leakage corrections, calibrated probabilities, conformal uncertainty, SHAP, drift monitoring, FastAPI, Docker, and scoped local Kubernetes tests.</p><p class="result">Corrected held-out ROC-AUC 0.7662, ECE 0.0310, and 93.1% conformal coverage against a 90% target.</p><div class="project-footer"><div class="tags"><span class="tag">XGBoost</span><span class="tag">LightGBM</span><span class="tag">MLflow</span><span class="tag">SHAP</span><span class="tag">MAPIE</span><span class="tag">K3d</span></div><div class="project-links"><a href="https://github.com/shubhamkragrawal/trialoutcome" target="_blank" rel="noreferrer">Repository ↗</a></div><p class="boundary">Uses corrected post-leakage results. The Kubernetes and load evidence is local, not production traffic.</p></div></article>
+        <article class="project" data-index="05"><span class="label">Data platform · Public</span><h3>PharmaPulse</h3><p>A recoverable analytics platform over ClinicalTrials.gov and openFDA: ingestion, PostgreSQL, dbt staging and marts, Airflow orchestration, CI, Tableau, and a read-only Streamlit experience.</p><p class="result">594,309 trials, 29,218 FDA applications, 24 staging tests, and 118 mart tests.</p><div class="project-footer"><div class="tags"><span class="tag">PostgreSQL</span><span class="tag">dbt</span><span class="tag">Airflow</span><span class="tag">Tableau</span><span class="tag">Streamlit</span></div><div class="project-links"><a href="https://github.com/shubhamkragrawal/pharmpulse" target="_blank" rel="noreferrer">Repository ↗</a></div><p class="boundary">Phase-volume ratios are directional summaries, not cohort transition probabilities.</p></div></article>
+        <article class="project" data-index="06"><span class="label">NLP fundamentals · Public</span><h3>Transformer Clinical NER</h3><p>A roughly 9.9M-parameter transformer encoder implemented from first principles in PyTorch and evaluated on BC5CDR, with a fair fine-tuned BERT baseline.</p><p class="result">From-scratch F1 0.6620 versus 0.8728 for the pretrained BERT baseline.</p><div class="project-footer"><div class="tags"><span class="tag">PyTorch</span><span class="tag">Transformers</span><span class="tag">BERT</span><span class="tag">Biomedical NER</span></div><div class="project-links"><a href="https://github.com/shubhamkragrawal/transformer-clinical-ner" target="_blank" rel="noreferrer">Repository ↗</a></div><p class="boundary">A fundamentals and reproducibility project—not presented as a product flagship.</p></div></article>
+      </div>
+    </div></section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="section-heading text-white">Professional Experience</h2>
-                <div class="relative max-w-full mx-auto">
-                    <!-- Timeline Line -->
-                    <div class="absolute left-1/2 -ml-0.5 w-1 h-full bg-gray-700"></div>
+    <section class="section-rule" id="experience"><div class="shell">
+      <div class="section-head"><div><p class="eyebrow">Experience</p><h2>Research depth. Commercial context.</h2></div><p>Nearly five years in industry taught me to translate technical work into decisions, collaborate across delivery teams, and support demanding users. My current graduate work adds deeper AI and research-system practice.</p></div>
+      <article class="experience"><div class="experience-meta"><h3>University at Buffalo</h3><p>Research Assistant · Oct 2025–Present</p></div><div class="experience-body"><h4>Research software and applied AI</h4><ul><li>Build human-in-the-loop data and AI workflows for clinical-pharmacology research, with detailed work kept private.</li><li>Mentor two undergraduate Pharmaceutical Science students and one MS Computer Science student through work review, progress tracking, recurring meetings, and deliverable approval.</li></ul></div></article>
+      <article class="experience"><div class="experience-meta"><h3>Everpure</h3><p>Senior Business Analyst · Sep 2024–Jun 2025</p></div><div class="experience-body"><h4>Executive analytics on Snowflake and Tableau</h4><ul><li>Built decision-facing dashboards and aligned KPI definitions and transformation logic across sales, operations, and leadership stakeholders.</li></ul></div></article>
+      <article class="experience"><div class="experience-meta"><h3>BlueOptima</h3><p>Data & ML roles · Oct 2020–May 2024</p></div><div class="experience-body"><h4>ML product R&D, engineering analytics, and client delivery</h4><ul><li>Led a LightGBM, agglomerative-clustering, and SHAP R&D initiative incorporated into <a class="inline-link" href="https://www.blueoptima.com/platform/performance-insights" target="_blank" rel="noreferrer">Performance Insights ↗</a>; led internal/client alpha-beta testing, coordinated backend release handoffs, and supported senior engineering and C-suite users after release.</li><li>Developed 30+ engineering-productivity metrics across 50+ enterprise clients.</li><li>Automated <a class="inline-link" href="https://www.blueoptima.com/platform/global-benchmark" target="_blank" rel="noreferrer">Global Benchmark ↗</a> reporting with Python and Tableau, saving 160+ hours of manual work per quarter.</li><li>Built Java/Python client-server ETL into centralized PostgreSQL and Grafana for Customer Success data-quality investigations.</li></ul></div></article>
+    </div></section>
 
-                    <!-- Pure Storage -->
-                    <div class="relative mb-12">
-                        <div class="absolute w-8 h-8 bg-blue-500 rounded-full left-1/2 -ml-4 border-4 border-gray-800">
-                        </div>
-                        <div class="ml-auto w-2/5 pr-10 text-left">
-                            <a href="https://www.purestorage.com" target="_blank"
-                                class="text-gray-400 hover:text-blue-400 transition-colors">
-                                <div class="flex items-left space-x-3">
-                                    <img src="assets/logos/Pure-Storage-Logo.jpg" alt="Pure Storage logo"
-                                        class="w-30 h-8 object-contain rounded-lg" />
-                                </div>
-                            </a>
+    <section class="section-rule" id="education"><div class="shell">
+      <div class="section-head"><div><p class="eyebrow">Education</p><h2>Engineering foundation. Applied focus.</h2></div><p>Graduate study in data science builds on earlier training in electronics, communication systems, and applied analytics.</p></div>
+      <article class="experience"><div class="experience-meta"><h3>University at Buffalo</h3><p>Expected Feb 2027</p></div><div class="experience-body"><h4>MS, Data Science</h4><p class="muted">Applied machine learning, LLM alignment, reliable AI systems, data engineering, and statistical evaluation.</p></div></article>
+      <article class="experience"><div class="experience-meta"><h3>IIIT Bangalore</h3><p>2020–2021</p></div><div class="experience-body"><h4>Post Graduate Diploma, Data Science</h4></div></article>
+      <article class="experience"><div class="experience-meta"><h3>Sir M Visvesvaraya Institute of Technology</h3><p>2015–2019</p></div><div class="experience-body"><h4>BE, Electronics and Communication Engineering</h4></div></article>
+    </div></section>
 
-                            <h3 class="text-xl font-bold text-white">Senior Business Analyst</h3>
-                            <p class="text-sm text-gray-500">Sep 2024 – June 2025</p>
-                            <ul class="list-disc list-outside text-gray-300 mt-2 space-y-2 text-left">
-                                <li>Architect and deploy interactive Tableau dashboards on Snowflake,
-                                    translating raw data into actionable insights that guide executive-level strategic
-                                    decisions.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+    <section class="section-rule" id="capabilities"><div class="shell">
+      <div class="section-head"><div><p class="eyebrow">Capabilities</p><h2>A practical, evidence-backed toolbox.</h2></div><p>These are technologies and methods represented across industry work, research, and public systems. Depth varies by context; the project links show where each was applied.</p></div>
+      <div class="capabilities">
+        <div class="capability"><h3>Programming & data</h3><p>Python, SQL, Java, R, PostgreSQL, SQLite, Snowflake, DuckDB, Parquet, PyArrow, dbt, Airflow, ETL and data modeling.</p></div>
+        <div class="capability"><h3>Machine learning</h3><p>PyTorch, scikit-learn, XGBoost, LightGBM, Optuna, SHAP, clustering, classification, calibration, conformal prediction and leakage-aware validation.</p></div>
+        <div class="capability"><h3>LLM training & alignment</h3><p>Transformers, Qwen, PEFT/LoRA, TRL, SFT, DPO, PPO, RLAIF, preference generation, reward design and failure analysis.</p></div>
+        <div class="capability"><h3>Reliable AI systems</h3><p>Typed tools, Pydantic, MCP, structured outputs, bounded orchestration, citation grounding, retrieval, deterministic gates, retry and budget controls.</p></div>
+        <div class="capability"><h3>Delivery & MLOps</h3><p>FastAPI, Streamlit, Docker, GitHub Actions, MLflow, pytest, Ruff, mypy, Vertex AI, Amazon Bedrock, CloudWatch and local Kubernetes/K3d.</p></div>
+        <div class="capability"><h3>Analytics & communication</h3><p>Tableau, Grafana, KPI and metric design, executive reporting, technical client support, R&D leadership and cross-functional delivery.</p></div>
+      </div>
+      <p class="note">Java reflects earlier BlueOptima ETL work. Cloud and Kubernetes claims are scoped to the linked projects; local tests are not represented as sustained production operations.</p>
+    </div></section>
 
-                    <!-- BlueOptima -->
-                    <div class="relative mb-12">
-                        <div class="absolute w-8 h-8 bg-blue-500 rounded-full left-1/2 -ml-4 border-4 border-gray-800">
-                        </div>
-                        <div class="mr-auto w-2/5 pl-10 text-left">
-                            <a href="https://www.blueoptima.com" target="_blank"
-                                class="text-gray-400 hover:text-blue-400 transition-colors">
-                                <div class="flex items-left space-x-3">
-                                    <img src="assets/logos/blueoptima.jpg" alt="Pure Storage logo"
-                                        class="w-30 h-8 object-contain rounded-lg" />
+    <section class="section-rule"><div class="shell">
+      <div class="section-head"><div><p class="eyebrow">How I work</p><h2>Reliability is a design choice.</h2></div><p>I’m most useful where model behavior, data quality, and user decisions meet—and where the team cares about knowing what the evidence does and does not establish.</p></div>
+      <div class="principles"><div class="principle"><strong>Measure the right layer</strong><p>Keep model capability separate from system outcomes, and attach every headline number to its evaluation conditions.</p></div><div class="principle"><strong>Design for failure</strong><p>Use typed boundaries, deterministic checks, provenance, safe fallbacks, and explicit refusal when uncertainty cannot be resolved.</p></div><div class="principle"><strong>Ship with context</strong><p>Connect technical implementation to the operator, client, or stakeholder who must understand and act on the result.</p></div></div>
+    </div></section>
 
-                                </div>
-                            </a>
+    <section class="contact section-rule" id="contact"><div class="shell"><div class="contact-card"><p class="eyebrow">Let’s talk</p><h2>Building applied AI that earns trust?</h2><p>I’m exploring Applied AI, Data Science, and hands-on customer-facing AI opportunities for a February 2027 start, subject to work authorization.</p><div class="actions" style="justify-content:center"><a class="button primary" href="mailto:agrawal.krshubham@gmail.com?subject=Opportunity%20for%20Shubham%20Kumar%20Agrawal">agrawal.krshubham@gmail.com</a><a class="button secondary" href="https://www.linkedin.com/in/shubham-kumar-agrawal/" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a></div></div></div></section>
+  </main>
 
-                            <h3 class="text-xl font-bold text-white">Data Analyst</h3>
-                            <p class="text-sm text-gray-500">Oct 2020 – May 2024</p>
-                            <ul class="list-disc list-outside text-gray-300 mt-2 space-y-2 text-left">
-                                <li>Spearheaded a flagship R&D initiative, engineering 25+ novel productivity metrics
-                                    from
-                                    client source code metadata.
-                                </li>
-                                <li>Engineered a Python automation pipeline that eliminated over 160 hours of manual
-                                    reporting work per month (a 95% reduction).
-                                </li>
-                                <li>Delivered data-driven recommendations to external clients, directly influencing
-                                    improvements in their SDLC processes.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Sumyag Data science -->
-                    <div class="relative mb-12">
-                        <div class="absolute w-8 h-8 bg-blue-500 rounded-full left-1/2 -ml-4 border-4 border-gray-800">
-                        </div>
-                        <div class="ml-auto w-2/5 pr-10 text-left">
-                            <p class="text-md text-gray-400">Sumyag Data Science</p>
-                            <h3 class="text-xl font-bold text-white">Data Science Intern</h3>
-
-                            <p class="text-sm text-gray-500">Nov 2019 – Feb 2020</p>
-                            <ul class="list-disc list-outside text-gray-300 mt-2 space-y-2 text-left">
-                                <li>Architect and deploy interactive Tableau dashboards on Snowflake,
-                                    translating raw data into actionable insights that guide executive-level strategic
-                                    decisions.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="py-20 bg-gray-800/50">
-            <div class="container mx-auto px-6">
-                <h2 class="section-heading text-white">Education</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                    <!-- Grad -->
-                    <div class="glass-effect rounded-lg p-6">
-                        <div class="flex items-start space-x-4">
-                            <div class="flex-shrink-0">
-                                <img src="assets/logos/ub_grad.jpg" alt="University at Buffalo logo"
-                                    class="w-14 h-14 flex rounded-md" />
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-semibold text-white">
-                                    University at Buffalo
-                                </h3>
-
-                                <p class="text-gray-300">
-                                    Master of Science in Data Science
-                                </p>
-
-                                <p class="text-sm text-gray-500">
-                                    Buffalo, NY, USA
-                                </p>
-
-                                <p class="text-sm text-gray-500">
-                                    Aug 2025 – Dec 2026
-                                </p>
-
-                                <ul class="list-disc list-inside text-gray-300 space-y-1">
-                                    <li class="text-sm">
-                                        Working as a <strong class="font-bold">Research Assistant</strong> to apply Data
-                                        Science in Clinical Pharmacology
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- post Grad -->
-                    <div class="glass-effect rounded-lg p-6">
-                        <div class="flex items-start space-x-4">
-                            <div class="flex-shrink-0">
-                                <img src="assets/logos/iiitb_post_grad.png"
-                                    alt="International Institute of Information Technology Bangalore logo"
-                                    class="w-14 h-14 flex rounded-md" />
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-semibold text-white">
-                                    International Institute of Information Technology Bangalore
-                                </h3>
-
-                                <p class="text-gray-300">
-                                    Post Graduate Diploma in Data Science
-                                </p>
-
-                                <p class="text-sm text-gray-500">
-                                    Bangalore, India
-                                </p>
-
-                                <p class="text-sm text-gray-500">
-                                    2020 – 2021
-                                </p>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- underGrad -->
-                    <div class="glass-effect rounded-lg p-6">
-                        <div class="flex items-start space-x-4">
-                            <div class="flex-shrink-0">
-                                <img src="assets/logos/vtu_undergrad.png" alt="VTU logo"
-                                    class="w-14 h-14 flex rounded-md" />
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-semibold text-white">
-                                    Visvesvaraya Technological University
-                                </h3>
-
-                                <p class="text-gray-300">
-                                    Bachelor of Engineering in Electronics & Communication
-                                </p>
-
-                                <p class="text-sm text-gray-500">
-                                    Bangalore, India
-                                </p>
-
-                                <p class="text-sm text-gray-500">
-                                    2015 – 2019
-                                </p>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-20 ">
-            <div class="container mx-auto px-5">
-                <h2 class="section-heading text-white">Projects</h2>
-                <p class="section-subheading">A selection of my academic and personal projects. More to come from my
-                    Master's program!</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                    <!-- Placeholder Project 1 -->
-                    <div
-                        class="glass-effect rounded-lg p-6 flex flex-col hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2">
-                        <h3 class="text-xl font-bold text-white mb-2">Global Sales Analytics</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">
-                            It is an interactive app using Python, SQL, and Streamlit 
-                            to explore sales data across regions, countries, customers, and products,
-                            enabling analysis of revenue trends, order patterns, and customer insights.
-                        </p>
-                        <div class="mt-auto">
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span
-                                    class="bg-blue-900/50 text-blue-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Python</span>
-                                <span
-                                    class="bg-blue-900/50 text-blue-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">scikit-learn</span>
-                                <span
-                                    class="bg-blue-900/50 text-blue-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">SQL</span>
-                                <span
-                                    class="bg-blue-900/50 text-blue-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">numpy</span>
-                                <span
-                                    class="bg-blue-900/50 text-blue-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Matplotlib</span>
-                                <span
-                                    class="bg-blue-900/50 text-blue-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">pandas</span>
-                                <span
-                                    class="bg-blue-900/50 text-blue-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">MLflow</span>
-                                <span
-                                    class="bg-blue-900/50 text-blue-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Docker</span>
-                                <span
-                                    class="bg-blue-900/50 text-blue-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">FastAPI</span>
-                            </div>
-                            <div class="flex space-x-4">
-                                <a href="https://github.com/shubhamkragrawal/Global-Sales-Analytics"
-                                 class="text-blue-400 hover:text-blue-300 font-medium">View on GitHub
-                                    &rarr;</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Terrain Smart Safety System -->
-                    <div
-                        class="glass-effect rounded-lg p-6 flex flex-col hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2">
-                        <h3 class="text-xl font-bold text-white mb-2">Terrain Smart Safety System</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">Co-developed an award-winning IoT prototype to mitigate
-                            accidents on hazardous roads using an RFID sensor network and an emergency broadcast system.
-                            My
-                            role focused on backend logic and hardware programming.</p>
-                        <div class="mt-auto">
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span
-                                    class="bg-green-900/50 text-green-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Python</span>
-                                <span
-                                    class="bg-green-900/50 text-green-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Arduino</span>
-                                <span
-                                    class="bg-green-900/50 text-green-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Embedded
-                                    C</span>
-                                <span
-                                    class="bg-green-900/50 text-green-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">IoT</span>
-                            </div>
-                            <div class="flex space-x-4">
-                                <a href="https://doi.org/10.1007/978-981-10-8201-6_54" target="_blank"
-                                    class="text-blue-400 hover:text-blue-300 font-medium">Read Publication &rarr;</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Placeholder Project 2 -->
-                    <div
-                        class="glass-effect rounded-lg p-6 flex flex-col hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2">
-                        <h3 class="text-xl font-bold text-white mb-2">Upcoming MS Project</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">I am actively working on new projects as part of my
-                            coursework at the University at Buffalo. This space will feature my work in areas like
-                            Natural
-                            Language Processing and Deep Learning. Stay tuned!</p>
-                        <div class="mt-auto">
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span
-                                    class="bg-purple-900/50 text-purple-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">NLP</span>
-                                <span
-                                    class="bg-purple-900/50 text-purple-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">PyTorch</span>
-                                <span
-                                    class="bg-purple-900/50 text-purple-300 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Deep
-                                    Learning</span>
-                            </div>
-                            <div class="flex space-x-4">
-                                <span class="text-gray-500 font-medium">Coming Soon</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="mt-8 flex justify-center items-center space-x-6">
-
-                    <a href="https://github.com/shubhamkragrawal" target="_blank"
-                        class="text-gray-400 hover:text-blue-400 transition-colors"> <!-- Add your GitHub Link -->
-                        View more at <i data-lucide="github" class="w-4 h-4 inline-block"></i>
-
-                    </a>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="py-20 bg-gray-800/50">
-            <div class="container mx-auto px-6">
-                <h2 class="section-heading text-white">Core Competencies</h2>
-                <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-6 gap-8 text-center">
-
-                    <div class="flex flex-col items-center">
-                        <div class="icon-circle"><i data-lucide="code-2" class="w-10 h-10 text-blue-400"></i></div>
-                        <h3 class="text-lg font-bold mt-4 text-white">Programming & Query Language</h3>
-                        <p class="text-gray-400">Python, SQL, PostgreSQL</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="icon-circle"><i data-lucide="database" class="w-10 h-10 text-blue-400"></i></div>
-                        <h3 class="text-lg font-bold mt-4 text-white">Data Analysis & Statistics</h3>
-                        <p class="text-gray-400">Pandas, NumPy, Statistical Analysis, Data Mining</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="icon-circle"><i data-lucide="bar-chart-3" class="w-10 h-10 text-blue-400"></i></div>
-                        <h3 class="text-lg font-bold mt-4 text-white">Machine Learning & Modeling</h3>
-                        <p class="text-gray-400">Supervised Learning, Unsupervised Learning, Predictive Modeling, Reinforcement Learning</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="icon-circle"><i data-lucide="brain-circuit" class="w-10 h-10 text-blue-400"></i>
-                        </div>
-                        <h3 class="text-lg font-bold mt-4 text-white">Deep Learning & AI Systems</h3>
-                        <p class="text-gray-400">PyTorch, LangChain, Large Language Models (LLMs)</p>
-                    </div>
-                     <div class="flex flex-col items-center">
-                        <div class="icon-circle"><i data-lucide="bar-chart-3" class="w-10 h-10 text-blue-400"></i></div>
-                        <h3 class="text-lg font-bold mt-4 text-white">Data Engineering & Infrastructure</h3>
-                        <p class="text-gray-400">Data Pipelines, ETL / ELT, Data Modeling, Snowflake, Docker, Git</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="icon-circle"><i data-lucide="brain-circuit" class="w-10 h-10 text-blue-400"></i>
-                        </div>
-                        <h3 class="text-lg font-bold mt-4 text-white">Data Visualization & Analytics</h3>
-                        <p class="text-gray-400">Tableau, Grafana, Dashboarding, Metrics Design</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Recommendations Section -->
-        <section id="recommendations" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="section-heading text-white">Recommendations</h2>
-                <p class="section-subheading">
-                    What colleagues, managers, and mentors have said about working with me.
-                </p>
-
-                <!-- div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8" -->
-                <div class="max-w-5xl mx-auto flex flex-col gap-8">
-
-
-                    <!-- Recommendation Jeff-->
-                    <div class="glass-effect rounded-lg p-6">
-                        <p class="text-gray-300 italic mb-6">
-                            Shubham was an invaluable collaborator in the ideation and execution of a critical Tableau
-                            dashboard for the tracking of extensive sales play metrics. He surfaced key insights, noted
-                            potential pitfalls, was always realistic about timelines and was an absolute joy to work
-                            with. I would love to work with Shubham again and cannot recommend him any more highly!
-                        </p>
-
-                        <div class="flex items-center space-x-4">
-                            <div class="flex items-left space-x-3">
-                                    <img src="assets/logos/Pure-Storage-Logo.jpg" alt="Pure Storage logo"
-                                        class="w-15 h-8 object-contain rounded-lg" />
-                            </div>
-                            
-                            <div>
-                                <p class="text-white font-semibold">
-                                    Jeff Pickett
-                                </p>
-                                <p class="text-sm text-gray-400">
-                                    Senior Commercial Offerings Manager<span class="mx-2">&middot;</span>Pure Storage
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Recommendation Card Cem -->
-                    <div class="glass-effect rounded-lg p-6">
-                        <p class="text-gray-300 italic mb-6">
-                            I had the pleasure of working with Shubham for nearly two years. He was an integral part of
-                            our analytics team and was working closely with the Product & UX team. Throughout our time
-                            working together, Shubham demonstrated exceptional analytical skills and a strong ability to
-                            translate complex data into actionable insights that informed critical business decisions.
-                            What stood out most was his problem-solving approach. He not only identified the root causes
-                            behind key business challenges but also proposed data-driven solutions that had measurable
-                            impact. Shubham was equally effective in managing relationships with stakeholders and
-                            clients, often acting as the bridge between technical and non-technical teams. His clarity
-                            in communication, attention to detail, and ability to understand business objectives made
-                            him a trusted partner across departments.
-                            Shubham’s professionalism, curiosity, and commitment to delivering high-quality results make
-                            him an asset to any team. I am confident that he will continue to excel and bring
-                            significant value to any organization he works with in the future.
-                        </p>
-
-                        <div class="flex items-center space-x-4">
-                            <div class="flex items-left space-x-3">
-                                    <img src="assets/logos/blueoptima.jpg" alt="Pure Storage logo"
-                                        class="w-15 h-8 object-contain rounded-lg" />
-
-                            </div>
-                            <div>
-                                <p class="text-white font-semibold">Cem Aladogan</p>
-                                <p class="text-sm text-gray-400"> Head of Product<span class="mx-2">&middot;</span>BlueOptima</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Recommendation Card Siva-->
-                    <div class="glass-effect rounded-lg p-6">
-                        <p class="text-gray-300 italic mb-6">
-                            I had the pleasure of working closely with Shubham during his time as a Data Analyst at
-                            BlueOptima.
-                            As a Data Analyst, he had a great way of breaking down complex data problems and turning
-                            them into
-                            insights that actually made sense and drove action.
-                            What stood out most to me was Shubham’s approach to work - calm and genuinely curious.
-                            He asked the right questions, paid attention to details, and was always willing to help
-                            others understand the data better. On top of that, he was a great team player.
-                            I’d happily recommend Shubham to any team looking for someone with good Data Analytics
-                            skills.
-                            I wish him all the very best in whatever he takes on next.
-                        </p>
-
-                        <div class="flex items-center space-x-4">
-                            <div class="flex items-left space-x-3">
-                                <img src="assets/logos/blueoptima.jpg" alt="Pure Storage logo"
-                                    class="w-15 h-8 object-contain rounded-lg" />
-
-                            </div>
-                            <div>
-                                <p class="text-white font-semibold">
-                                    Sivagnanam Namasivayamurthy
-                                </p>
-                                <p class="text-sm text-gray-400">
-                                    Lead Machine Learning Data Engineer<span class="mx-2">&middot;</span>BlueOptima
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Recommendation Card Varinda-->
-                    <div class="glass-effect rounded-lg p-6">
-                        <p class="text-gray-300 italic mb-6">
-                            I had the pleasure of working alongside Shubham at BlueOptima He is remarkably diligent and
-                            talented data analyst. What truly sets him apart is his unwavering work ethic and his knack
-                            for identifying key trends in large datasets. He consistently delivered high-quality work,
-                            and his enthusiasm was contagious. I'm confident Shubham would be a valuable asset to any
-                            organization.
-                        </p>
-
-                        <div class="flex items-center space-x-4">
-                            <div class="flex items-left space-x-3">
-                                    <img src="assets/logos/blueoptima.jpg" alt="Pure Storage logo"
-                                        class="w-15 h-8 object-contain rounded-lg" />
-
-                            </div>
-                            <div>
-                                <p class="text-white font-semibold">
-                                    Varinda Rani
-                                </p>
-                                <p class="text-sm text-gray-400">
-                                    Machine Learning Data Engineer<span class="mx-2">&middot;</span>BlueOptima
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-gray-800/50">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="section-heading text-white">Get In Touch</h2>
-                <p class="section-subheading">I am actively seeking Data Scientist internship opportunities for Summer
-                    2026
-                    and would love to connect. Please feel free to reach out!</p>
-                <a href="mailto:agrawal.kshubham@gmail.com"
-                    class="inline-block accent-bg text-white font-bold py-3 px-8 rounded-full text-lg accent-bg-hover transition-transform transform hover:scale-105">
-                    Say Hello
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 py-6">
-        <div class="container mx-auto px-6 text-center text-gray-500">
-            <p>&copy; 2025 Shubham Kumar Agrawal. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        lucide.createIcons();
-
-        // Mobile menu toggle
-        const menuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu on link click
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    </script>
+  <footer><div class="shell footer-row"><span>© <span id="year"></span> Shubham Kumar Agrawal</span><span>Buffalo, NY · Open to US relocation</span></div></footer>
+  <script>
+    const button = document.getElementById('menuButton');
+    const links = document.getElementById('navLinks');
+    button.addEventListener('click', () => { const isOpen = links.classList.toggle('open'); button.setAttribute('aria-expanded', String(isOpen)); });
+    links.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => { links.classList.remove('open'); button.setAttribute('aria-expanded', 'false'); }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
-
 </html>
